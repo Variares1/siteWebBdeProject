@@ -1,2 +1,2 @@
 # siteWebBdeProject
-projet web exia A2 site du BDE
+Exia A2 web project, to make the Cesi BDE website
