@@ -18,4 +18,11 @@ class ControllerHome
         else
             $this->events();
     }
+
+    private function events(){
+        $this->eventManager = new EventManager;
+        $events = $this->eventManager->getEvents();
+
+        require_once('views/viewHome.php');
+    }
 }

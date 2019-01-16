@@ -8,7 +8,7 @@
 
 class EventManager extends Model
 {
-    public function getEvent(){
+    public function getEvents(){
         return $this->getAll('events', 'Event');
     }
 }
