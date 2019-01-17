@@ -1,0 +1,316 @@
+#------------------------------------------------------------
+#        Script MySQL.
+#------------------------------------------------------------
+
+
+#------------------------------------------------------------
+# Table: Users
+#------------------------------------------------------------
+
+CREATE TABLE Users(
+        id_User   Int  Auto_increment  NOT NULL ,
+        Name      Char (30) NOT NULL ,
+        Firstname Char (30) NOT NULL ,
+        Centre    Char (30) NOT NULL ,
+        Email     Char (30) NOT NULL ,
+        Password  Char (30) NOT NULL
+	,CONSTRAINT Users_PK PRIMARY KEY (id_User)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Activity
+#------------------------------------------------------------
+
+CREATE TABLE Activity(
+        id_activity             Int  Auto_increment  NOT NULL ,
+        Name                    Char (30) NOT NULL ,
+        Description             Char (30) NOT NULL ,
+        Date                    Datetime NOT NULL ,
+        Activity_place          Char (75) NOT NULL ,
+        Votes                   Int NOT NULL ,
+        Numbers_of_Participants Int NOT NULL ,
+        Remaining_Places        Int NOT NULL ,
+        Price                   Float NOT NULL
+	,CONSTRAINT Activity_PK PRIMARY KEY (id_activity)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: img
+#------------------------------------------------------------
+
+CREATE TABLE img(
+        id_img      Int  Auto_increment  NOT NULL ,
+        URL         Char (75) NOT NULL ,
+        Likes       Int NOT NULL ,
+        id_User     Int NOT NULL ,
+        id_activity Int NOT NULL
+	,CONSTRAINT img_PK PRIMARY KEY (id_img)
+
+	,CONSTRAINT img_Users_FK FOREIGN KEY (id_User) REFERENCES Users(id_User)
+	,CONSTRAINT img_Activity0_FK FOREIGN KEY (id_activity) REFERENCES Activity(id_activity)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Comment
+#------------------------------------------------------------
+
+CREATE TABLE Comment(
+        id_Comment Int  Auto_increment  NOT NULL ,
+        Content    Char (5) NOT NULL ,
+        id_img     Int NOT NULL ,
+        id_User    Int NOT NULL
+	,CONSTRAINT Comment_PK PRIMARY KEY (id_Comment)
+
+	,CONSTRAINT Comment_img_FK FOREIGN KEY (id_img) REFERENCES img(id_img)
+	,CONSTRAINT Comment_Users0_FK FOREIGN KEY (id_User) REFERENCES Users(id_User)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: event_idea
+#------------------------------------------------------------
+
+CREATE TABLE event_idea(
+        id_event          Int  Auto_increment  NOT NULL ,
+        Name_event        Char (30) NOT NULL ,
+        Description_Event Char (100) NOT NULL ,
+        Like              Int NOT NULL ,
+        id_User           Int NOT NULL
+	,CONSTRAINT event_idea_PK PRIMARY KEY (id_event)
+
+	,CONSTRAINT event_idea_Users_FK FOREIGN KEY (id_User) REFERENCES Users(id_User)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Product
+#------------------------------------------------------------
+
+CREATE TABLE Product(
+        id           Int  Auto_increment  NOT NULL ,
+        Product_name Char (30) NOT NULL ,
+        product_desc Char (100) NOT NULL ,
+        price        Float NOT NULL ,
+        qty          Int NOT NULL ,
+        url          Char (100) NOT NULL
+	,CONSTRAINT Product_PK PRIMARY KEY (id)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Cart
+#------------------------------------------------------------
+
+CREATE TABLE Cart(
+        id_cart Int  Auto_increment  NOT NULL ,
+        qty     Int NOT NULL
+	,CONSTRAINT Cart_PK PRIMARY KEY (id_cart)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Participate
+#------------------------------------------------------------
+
+CREATE TABLE Participate(
+        id_activity Int NOT NULL ,
+        id_User     Int NOT NULL
+	,CONSTRAINT Participate_PK PRIMARY KEY (id_activity,id_User)
+
+	,CONSTRAINT Participate_Activity_FK FOREIGN KEY (id_activity) REFERENCES Activity(id_activity)
+	,CONSTRAINT Participate_Users0_FK FOREIGN KEY (id_User) REFERENCES Users(id_User)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: cart1
+#------------------------------------------------------------
+
+CREATE TABLE cart1(
+        id      Int NOT NULL ,
+        id_cart Int NOT NULL ,
+        qty     Int NOT NULL ,
+        Price   Float NOT NULL
+	,CONSTRAINT cart1_PK PRIMARY KEY (id,id_cart)
+
+	,CONSTRAINT cart1_Product_FK FOREIGN KEY (id) REFERENCES Product(id)
+	,CONSTRAINT cart1_Cart0_FK FOREIGN KEY (id_cart) REFERENCES Cart(id_cart)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: relation9
+#------------------------------------------------------------
+
+CREATE TABLE relation9(
+        id_cart Int NOT NULL ,
+        id_User Int NOT NULL
+	,CONSTRAINT relation9_PK PRIMARY KEY (id_cart,id_User)
+
+	,CONSTRAINT relation9_Cart_FK FOREIGN KEY (id_cart) REFERENCES Cart(id_cart)
+	,CONSTRAINT relation9_Users0_FK FOREIGN KEY (id_User) REFERENCES Users(id_User)
+)ENGINE=InnoDB;
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------------
+#        Script MySQL.
+#------------------------------------------------------------
+
+
+#------------------------------------------------------------
+# Table: Users
+#------------------------------------------------------------
+
+CREATE TABLE Users(
+        id_User   Int  Auto_increment  NOT NULL ,
+        Name      Char (30) NOT NULL ,
+        Firstname Char (30) NOT NULL ,
+        Centre    Char (30) NOT NULL ,
+        Email     Char (30) NOT NULL ,
+        Password  Char (30) NOT NULL
+	,CONSTRAINT Users_PK PRIMARY KEY (id_User)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Activity
+#------------------------------------------------------------
+
+CREATE TABLE Activity(
+        id_activity             Int  Auto_increment  NOT NULL ,
+        Name                    Char (30) NOT NULL ,
+        Description             Char (30) NOT NULL ,
+        Date                    Datetime NOT NULL ,
+        Activity_place          Char (75) NOT NULL ,
+        Votes                   Int NOT NULL ,
+        Numbers_of_Participants Int NOT NULL ,
+        Remaining_Places        Int NOT NULL ,
+        Price                   Float NOT NULL
+	,CONSTRAINT Activity_PK PRIMARY KEY (id_activity)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: img
+#------------------------------------------------------------
+
+CREATE TABLE img(
+        id_img      Int  Auto_increment  NOT NULL ,
+        URL         Char (75) NOT NULL ,
+        Likes       Int NOT NULL ,
+        id_User     Int NOT NULL ,
+        id_activity Int NOT NULL
+	,CONSTRAINT img_PK PRIMARY KEY (id_img)
+
+	,CONSTRAINT img_Users_FK FOREIGN KEY (id_User) REFERENCES Users(id_User)
+	,CONSTRAINT img_Activity0_FK FOREIGN KEY (id_activity) REFERENCES Activity(id_activity)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Comment
+#------------------------------------------------------------
+
+CREATE TABLE Comment(
+        id_Comment Int  Auto_increment  NOT NULL ,
+        Content    Char (5) NOT NULL ,
+        id_img     Int NOT NULL ,
+        id_User    Int NOT NULL
+	,CONSTRAINT Comment_PK PRIMARY KEY (id_Comment)
+
+	,CONSTRAINT Comment_img_FK FOREIGN KEY (id_img) REFERENCES img(id_img)
+	,CONSTRAINT Comment_Users0_FK FOREIGN KEY (id_User) REFERENCES Users(id_User)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: event_idea
+#------------------------------------------------------------
+
+CREATE TABLE event_idea(
+        id_event          Int  Auto_increment  NOT NULL ,
+        Name_event        Char (30) NOT NULL ,
+        Description_Event Char (100) NOT NULL ,
+        Like              Int NOT NULL ,
+        id_User           Int NOT NULL
+	,CONSTRAINT event_idea_PK PRIMARY KEY (id_event)
+
+	,CONSTRAINT event_idea_Users_FK FOREIGN KEY (id_User) REFERENCES Users(id_User)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Product
+#------------------------------------------------------------
+
+CREATE TABLE Product(
+        id           Int  Auto_increment  NOT NULL ,
+        Product_name Char (30) NOT NULL ,
+        product_desc Char (100) NOT NULL ,
+        price        Float NOT NULL ,
+        qty          Int NOT NULL ,
+        url          Char (100) NOT NULL ,
+        nb_commande  Int NOT NULL
+	,CONSTRAINT Product_PK PRIMARY KEY (id)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Cart
+#------------------------------------------------------------
+
+CREATE TABLE Cart(
+        id_cart Int  Auto_increment  NOT NULL ,
+        qty     Int NOT NULL
+	,CONSTRAINT Cart_PK PRIMARY KEY (id_cart)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Participate
+#------------------------------------------------------------
+
+CREATE TABLE Participate(
+        id_activity Int NOT NULL ,
+        id_User     Int NOT NULL
+	,CONSTRAINT Participate_PK PRIMARY KEY (id_activity,id_User)
+
+	,CONSTRAINT Participate_Activity_FK FOREIGN KEY (id_activity) REFERENCES Activity(id_activity)
+	,CONSTRAINT Participate_Users0_FK FOREIGN KEY (id_User) REFERENCES Users(id_User)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: cart1
+#------------------------------------------------------------
+
+CREATE TABLE cart1(
+        id      Int NOT NULL ,
+        id_cart Int NOT NULL ,
+        qty     Int NOT NULL ,
+        Price   Float NOT NULL
+	,CONSTRAINT cart1_PK PRIMARY KEY (id,id_cart)
+
+	,CONSTRAINT cart1_Product_FK FOREIGN KEY (id) REFERENCES Product(id)
+	,CONSTRAINT cart1_Cart0_FK FOREIGN KEY (id_cart) REFERENCES Cart(id_cart)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: relation9
+#------------------------------------------------------------
+
+CREATE TABLE relation9(
+        id_cart Int NOT NULL ,
+        id_User Int NOT NULL
+	,CONSTRAINT relation9_PK PRIMARY KEY (id_cart,id_User)
+
+	,CONSTRAINT relation9_Cart_FK FOREIGN KEY (id_cart) REFERENCES Cart(id_cart)
+	,CONSTRAINT relation9_Users0_FK FOREIGN KEY (id_User) REFERENCES Users(id_User)
+)ENGINE=InnoDB;
+
+
+
