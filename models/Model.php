@@ -1,37 +1,47 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: quent
- * Date: 16/01/2019
- * Time: 14:25
- */
 
-abstract class Model
+class model
 {
-    private static $bdd;
+    protected $pdo = null;
+    protected $dernierId = 0;
+    protected $message = "";
 
-    // INSTANCE DB CONNEXION
-    private static function setBdd(){
-        self::$bdd = new PDO('mysql:host=localhost;dbname=bde;charset=utf8','root','');
-        self::$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+    // DB CONNEXION
+    protected function getBdd()
+    {
+        if($this->pdo == null)
+        {
+            try
+            {
+                $this->pdo = new PDO('mysql:host=localhost;dbname=test', 'root', '');
+            }
+            catch (PDOException $e)
+            {
+                print "Erreur : " . $e->getMessage() . "<br />";
+                exit();
+            }
+
+        }
+        return $this->pdo;
     }
 
-    // GET DB CONNEXION
-    protected function getBdd(){
-        if(self::$bdd == null){
-            self::setBdd();
-            return self::$bdd;
-        }
-    }
+    // REQUEST EXECUTION
+    protected function executerRequete($requete, $parametres = null)
+    {
 
-    protected function getAll($table, $obj){
-        $var = [];
-        $req = $this->getBdd()->prepare('SELECT * FROM ' .$table. ' ORDER BY id desc');
-        $req->execute();
-        while($data = $req->fetch(PDO::FETCH_ASSOC)){
-            $var[] = new $obj($data);
+        // WITHOUT PARAMETERS
+        if ($parametres == null)
+        {
+            $resultat = $this->getBdd()->query($requete);
         }
-        return $var;
-        $req->closeCursor();
+
+        // WITH PARAMETERS
+        else
+        {
+            $resultat = $this->getBdd()->prepare($requete);
+            $resultat->execute($parametres);
+        }
+
+        return $resultat;
     }
 }
