@@ -22,32 +22,22 @@
 <div class="header">
     <?php
 
-    $index = "./index.php";
-    $project = "./project.php";
-    $shop = "./shop.php";
+    $index = "./views/viewHome.html.php";
+    $project = "./views/viewProject.html.php";
+    $shop = "./views/viewShop.html.php";
     $form = "./form.php";
     $php = "./php.php";
-    $signUp = "./signUp.php";
-    $signIn = "./signIn.php";
+    $signUp = "./views/viewSignUp.html.php";
+    $signIn = "./views/viewSignIn.html.php";
 
     ?>
 
     <nav>
-        <?php if(page == "/www/index.php") echo "<div class='here'>" ?>
         <li><a href=<?php echo $index ?>>home</a></li>
-        <?php if(page == "/www/index.php") echo "</div>" ?>
-        <?php if(page == "/www/project.php") echo "<div class='here'>" ?>
         <li><a href=<?php echo $project ?>>Project</a></li>
-        <?php if(page == "/www/project.php") echo "</div>" ?>
-        <?php if(page == "/www/shop.php") echo "<div class='here'>" ?>
         <li><a href=<?php echo $shop ?>>shop</a></li>
-        <?php if(page == "/www/shop.php") echo "</div>" ?>
-        <?php if(page == "/www/signIn.php") echo "<div class='here'>" ?>
         <li><a href=<?php echo $signIn ?>>Sign in</a></li>
-        <?php if(page == "/www/signIn.php") echo "</div>" ?>
-        <?php if(page == "/www/signUp.php") echo "<div class='here'>" ?>
         <li><a href=<?php echo $signUp ?>>Sign up</a></li>
-        <?php if(page == "/www/signUp.php") echo "</div>" ?>
     </nav>
 
     <leftMenu>

@@ -166,11 +166,32 @@ h1{
 	padding: 4% 0;
 }
 
+h2{
+	font-family: 'Bungee', cursive;
+}
+
 .events-home {
 	background: #6586b9cc;
 	width: 100%;
+	display: flex;
+	margin-top: -15px;
+	padding: 1%;
+	justify-content: space-around;
 }
 
-h2{
-	font-family: 'Bungee', cursive;
+.events-home * {
+	margin: 1%;
+}
+
+.events-home-text {
+
+	background: white;
+	width: 650px;
+	height: 200px;
+	margin: 3% 0;
+	border-radius: 10px;
+	font-family: 'Boogaloo', cursive;
+	font-size: 1.5em;
+	padding: 1% 5%;
+
 }
