@@ -4,7 +4,7 @@
 <?php
 //echo $donnees[0]->$donnee["title"];
 foreach ($donnees as $donnee) {
-    echo $donnee["title"];
+    //echo $donnee["title"];
 }?>
 
 <?php require_once('footer.inc.php') ?>

@@ -1,0 +1,135 @@
+body{
+	text-decoration: none;
+	font-family: calibri Light;
+	margin: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+.header {
+	display: flex;
+	text-align: center;
+	height: auto;
+	width: 100%;
+}
+
+nav {
+	z-index: 99;
+	display: flex;
+	position: fixed;
+	height: 100px;
+	background-color: #000000b3;
+	width: 100%;
+	justify-content: center;
+}
+
+nav img{
+	width: auto;
+	height: 100%;
+	margin: 0 20px;
+}
+
+nav li {
+	text-transform: uppercase;
+	padding: 35px 20px;
+	list-style-type: none;
+	font-size: 1.2em;
+}
+
+nav li:hover {
+	box-shadow: 0 0 20px 0px black;
+	transition: all ease 0.5s;
+}
+
+.header a {
+	text-decoration: none;
+	color: black;
+}
+
+.header .bandeau {
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.here {
+
+    font-weight: bold;
+
+}
+
+.footer {
+    position: relative;
+    z-index: 101;
+    overflow: hidden;
+    color: #a5ae4b;
+    font-family: verdana;
+    top: 800px;
+    height: auto;
+	width: 100%;
+}
+
+#footer-content {
+    background-color: black;
+    color: #7492c1b3;
+    padding-top: 15px;
+	padding-bottom: 20px;
+    justify-content: space-around;
+	display: flex;
+
+}
+
+#footer-sep {
+    background-color: #7492c1b3;
+    min-height: 25px;
+}
+
+#footer-content .fab {
+    margin-top: 20px;
+    padding-right: 10px;
+    font-size: 1.5em;
+}
+
+#footer-content a{
+	color: #7492c1;
+}
+
+.slider {
+
+    position: relative;
+    top: 300px;
+    width: 60%;
+    height: 300px;
+    margin: 0 20%;
+    background-color: #878787cc;
+
+}
+
+.carousel {
+	height: 298px;
+}
+
+.w-100 {
+
+    width: 393px !important;
+
+}
+
+leftMenu{
+	top: 100px;
+	height: 100%;
+	position: fixed;
+	background-color: #000000b3;
+	z-index: 100;
+}
+
+.cesiLogo{
+	top: 100px;
+}
