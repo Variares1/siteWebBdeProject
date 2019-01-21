@@ -5,6 +5,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -22,8 +24,7 @@
 
     $index = "./index.php";
     $project = "./project.php";
-    $financement = "./financement.php";
-    $contact = "./contact.php";
+    $shop = "./shop.php";
     $form = "./form.php";
     $php = "./php.php";
     $signUp = "./signUp.php";
@@ -38,12 +39,9 @@
         <?php if(page == "/www/project.php") echo "<div class='here'>" ?>
         <li><a href=<?php echo $project ?>>Project</a></li>
         <?php if(page == "/www/project.php") echo "</div>" ?>
-        <?php if(page == "/www/financement.php") echo "<div class='here'>" ?>
-        <li><a href=<?php echo $financement ?>>Financement</a></li>
-        <?php if(page == "/www/financement.php") echo "</div>" ?>
-        <?php if(page == "/www/contact.php") echo "<div class='here'>" ?>
-        <li><a href=<?php echo $contact ?>>Contact</a></li>
-        <?php if(page == "/www/contact.php") echo "</div>" ?>
+        <?php if(page == "/www/shop.php") echo "<div class='here'>" ?>
+        <li><a href=<?php echo $shop ?>>shop</a></li>
+        <?php if(page == "/www/shop.php") echo "</div>" ?>
         <?php if(page == "/www/signIn.php") echo "<div class='here'>" ?>
         <li><a href=<?php echo $signIn ?>>Sign in</a></li>
         <?php if(page == "/www/signIn.php") echo "</div>" ?>
@@ -53,8 +51,10 @@
     </nav>
 
     <leftMenu>
-        <div class="cesiLogo">
-            <img src="https://cdn.discordapp.com/attachments/534778554156843029/535815285962178570/logo_png.png" alt="CESI">
+        <div class="cesiLogo" >
+            <a href=<?php echo $index ?>>
+                <img src="https://images-ext-1.discordapp.net/external/Q6EGjALRzRlMZVIeP_6Jd7X6x3RyvYKqyhJ2FKLLyl4/https/cdn.discordapp.com/attachments/385099252226981889/535765385241296899/Logo.jpg" alt="CESI">
+            </a>
         </div>
     </leftMenu>
 
