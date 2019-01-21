@@ -12,8 +12,7 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/script.js"></script>
+    <link rel="stylesheet" href="http://localhost/siteWebBdeProject/assets/css/style.css">
 
     <?php define('page', $_SERVER['PHP_SELF'], true) ?>
 
@@ -22,13 +21,13 @@
 <div class="header">
     <?php
 
-    $index = "./views/viewHome.html.php";
-    $project = "./views/viewProject.html.php";
-    $shop = "./views/viewShop.html.php";
-    $form = "./form.php";
+    $index = "http://localhost/siteWebBdeProject/";
+    $project = "http://localhost/siteWebBdeProject/views/viewProject.html.php";
+    $shop = "http://localhost/siteWebBdeProject/views/viewShop.html.php";
+    $form = "http://localhost/siteWebBdeProject/form.php";
     $php = "./php.php";
-    $signUp = "./views/viewSignUp.html.php";
-    $signIn = "./views/viewSignIn.html.php";
+    $signUp = "http://localhost/siteWebBdeProject/views/viewSignUp.html.php";
+    $signIn = "http://localhost/siteWebBdeProject/views/viewSignIn.html.php";
 
     ?>
 

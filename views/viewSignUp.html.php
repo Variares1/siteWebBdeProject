@@ -1,3 +1,6 @@
+<?php require_once('header.inc.php') ?>
+
+
 <form method="POST" action="../models/modelSignUp.php" style="margin-top:30px;">
       <div class="row">
         <div class="small-8">
@@ -60,3 +63,6 @@
         </div>
       </div>
     </form>
+
+
+<?php require_once('footer.inc.php') ?>

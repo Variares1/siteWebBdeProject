@@ -23,6 +23,13 @@ class controllerPages
                 require_once('views/viewHome.html.php');
                 break;
 
+            // SIGN UP PAGE
+            case "SignUp":
+                require_once('models/modelSignUp.php');
+                $this->model = new modelSignUp();
+                require_once('views/viewSignUp.html.php');
+                break;
+
             // EVENTS PAGE
             case "events":
                 require_once('models/modelHome.php');
