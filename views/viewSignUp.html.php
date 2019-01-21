@@ -1,7 +1,7 @@
 <?php require_once('header.inc.php') ?>
 
-
-<form method="POST" action="../models/modelSignUp.php" style="margin-top:30px;">
+<div class="container-home">
+    <form method="POST" action="../models/modelSignUp.php" style="margin-top:30px;">
       <div class="row">
         <div class="small-8">
 
@@ -63,6 +63,7 @@
         </div>
       </div>
     </form>
+</div>
 
 
 <?php require_once('footer.inc.php') ?>

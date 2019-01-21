@@ -16,4 +16,4 @@ foreach ($donnees as $donnee) {
         <div class="events-home-text"><h2>Events</h2><strong style="color: green">Leek Wars</strong> est un jeu de combat de poireaux, par navigateur, dans lequel vous programmez votre intelligence artificielle pour réussir à vaincre vos ennemis !</div>
     </div>
 </div>
-<?phparequire_once('footer.inc.php') ?>
+<?php require_once('footer.inc.php') ?>
