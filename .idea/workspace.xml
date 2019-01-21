@@ -31,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/viewHome.html.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="81" selection-start-line="19" selection-start-column="81" selection-end-line="19" selection-end-column="81" />
+            <state relative-caret-position="391">
+              <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
               <folding>
                 <element signature="e#463#483#0#HTML" expanded="true" />
                 <element signature="e#790#811#0#HTML" expanded="true" />
@@ -45,8 +45,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="224" column="17" lean-forward="true" selection-start-line="224" selection-start-column="17" selection-end-line="224" selection-end-column="17" />
+            <state relative-caret-position="362">
+              <caret line="75" column="19" lean-forward="true" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -165,16 +165,15 @@
       <workItem from="1547800869354" duration="4219000" />
       <workItem from="1547818025399" duration="3636000" />
       <workItem from="1548058590898" duration="8299000" />
-      <workItem from="1548070777163" duration="12594000" />
+      <workItem from="1548070777163" duration="13357000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28748000" />
+    <option name="totallyTimeSpent" value="29511000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49860334" visible="true" weight="0.17785235" />
       <window_info id="Structure" order="1" sideWeight="0.50139666" side_tool="true" visible="true" weight="0.17785235" />
@@ -276,13 +275,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/header.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="90" lean-forward="true" selection-start-line="14" selection-start-column="90" selection-end-line="14" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/verify.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -327,10 +319,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/header.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="90" lean-forward="true" selection-start-line="14" selection-start-column="90" selection-end-line="14" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/viewHome.html.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="81" selection-start-line="19" selection-start-column="81" selection-end-line="19" selection-end-column="81" />
+        <state relative-caret-position="391">
+          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
           <folding>
             <element signature="e#463#483#0#HTML" expanded="true" />
             <element signature="e#790#811#0#HTML" expanded="true" />
@@ -341,8 +340,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="224" column="17" lean-forward="true" selection-start-line="224" selection-start-column="17" selection-end-line="224" selection-end-column="17" />
+        <state relative-caret-position="362">
+          <caret line="75" column="19" lean-forward="true" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="19" />
         </state>
       </provider>
     </entry>

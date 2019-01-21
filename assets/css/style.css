@@ -73,7 +73,7 @@ nav li:hover {
     font-family: verdana;
     height: auto;
 	width: 100%;
-	top: 600px;
+	/*top: 600px;*/
 }
 
 #footer-content {
