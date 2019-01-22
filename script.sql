@@ -121,6 +121,7 @@ CREATE TABLE IF NOT EXISTS `database_development`.`events` (
   `event_price` FLOAT NULL DEFAULT NULL,
   `event_p_r` INT(11) NULL DEFAULT NULL,
   `event_p_t` INT(11) NULL DEFAULT NULL,
+  `event_img` CHAR(255) NULL DEFAULT NULL,
   PRIMARY KEY (`id_events`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
@@ -282,6 +283,7 @@ CREATE TABLE IF NOT EXISTS `database_production`.`events` (
   `event_price` FLOAT NULL DEFAULT NULL,
   `event_p_r` INT(11) NULL DEFAULT NULL,
   `event_p_t` INT(11) NULL DEFAULT NULL,
+  `event_img` CHAR(255) NULL DEFAULT NULL,
   PRIMARY KEY (`id_events`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
@@ -443,6 +445,7 @@ CREATE TABLE IF NOT EXISTS `database_test`.`events` (
   `event_price` FLOAT NULL DEFAULT NULL,
   `event_p_r` INT(11) NULL DEFAULT NULL,
   `event_p_t` INT(11) NULL DEFAULT NULL,
+  `event_img` CHAR(255) NULL DEFAULT NULL,
   PRIMARY KEY (`id_events`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
