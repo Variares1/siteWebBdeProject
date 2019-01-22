@@ -7,6 +7,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -14,18 +15,15 @@
 
     <link rel="stylesheet" href="http://localhost/siteWebBdeProject/assets/css/style.css">
 
-    <?php define('page', $_SERVER['PHP_SELF'], true) ?>
-
 </head>
 <body>
 <div class="header">
     <?php
 
     $index = "http://localhost/siteWebBdeProject/";
-    $project = "http://localhost/siteWebBdeProject/views/viewProject.html.php";
+    $ideas = "http://localhost/siteWebBdeProject/views/viewIdeas.html.php";
+    $events = "http://localhost/siteWebBdeProject/views/viewEvents.html.php";
     $shop = "http://localhost/siteWebBdeProject/views/viewShop.html.php";
-    $form = "http://localhost/siteWebBdeProject/form.php";
-    $php = "./php.php";
     $signUp = "http://localhost/siteWebBdeProject/views/viewSignUp.html.php";
     $signIn = "http://localhost/siteWebBdeProject/views/viewSignIn.html.php";
 
@@ -33,7 +31,8 @@
 
     <nav>
         <li><a href=<?php echo $index ?>>home</a></li>
-        <li><a href=<?php echo $project ?>>Project</a></li>
+        <li><a href=<?php echo $ideas ?>>ideas</a></li>
+        <li><a href=<?php echo $events ?>>events</a></li>
         <li><a href=<?php echo $shop ?>>shop</a></li>
         <li><a href=<?php echo $signIn ?>>Sign in</a></li>
         <li><a href=<?php echo $signUp ?>>Sign up</a></li>
@@ -43,6 +42,11 @@
         <div class="cesiLogo" >
             <a href=<?php echo $index ?>>
                 <img src="https://images-ext-1.discordapp.net/external/Q6EGjALRzRlMZVIeP_6Jd7X6x3RyvYKqyhJ2FKLLyl4/https/cdn.discordapp.com/attachments/385099252226981889/535765385241296899/Logo.jpg" alt="CESI">
+                <div class="shop-home">
+                    <div class="bandeau-shop-home">
+                        <p>3 most popular articles</p>
+                    </div>
+                </div>
             </a>
         </div>
     </leftMenu>
