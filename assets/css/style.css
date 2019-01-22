@@ -1,3 +1,7 @@
+/*------------------------------------------------------------------------
+--------------------------------GENERAL-START-------------------------------
+--------------------------------------------------------------------------*/
+
 body{
 	text-decoration: none;
 	font-family: calibri Light;
@@ -53,6 +57,38 @@ nav .sign-home {
 	margin: 0 15%;
 }
 
+h1 p{
+	font-family: 'Boogaloo', cursive;
+	font-size: 75%;
+	padding: 0 10px;
+}
+h1{
+	text-align: center;
+	margin: 10% 35%;
+	color: #fffc;
+	background-color: #6586bbb3;
+	height: 40%;
+	font-family: 'Bungee', cursive;
+	font-size: 3em;
+	width: 30%;
+	padding: 4% 0;
+	box-shadow: 0 0 10px 4px #1e210dc9;
+}
+
+h2{
+	font-family: 'Bungee', cursive;
+}
+
+/*------------------------------------------------------------------------
+--------------------------------GENERAL-END-------------------------------
+--------------------------------------------------------------------------*/
+
+
+
+/*------------------------------------------------------------------------
+--------------------------------HEADER-START-------------------------------
+--------------------------------------------------------------------------*/
+
 .header a {
 	text-decoration: none;
 	color: white;
@@ -65,11 +101,29 @@ nav .sign-home {
     background-size: cover;
 }
 
-.here {
-
-    font-weight: bold;
+leftMenu{
+	top: 85px;
+	height: 100%;
+	width: 300px;
+	position: fixed;
+	background-color: #000000e6;
+	z-index: 100;
 
 }
+
+.cesiLogo{
+	top: 100px;
+}
+
+/*------------------------------------------------------------------------
+--------------------------------HEADER-END-------------------------------
+--------------------------------------------------------------------------*/
+
+
+
+/*------------------------------------------------------------------------
+--------------------------------FOOTER-START-------------------------------
+--------------------------------------------------------------------------*/
 
 .footer {
     position: relative;
@@ -129,54 +183,12 @@ nav .sign-home {
 
 }
 
-leftMenu{
-	top: 85px;
-	height: 100%;
-	width: 300px;
-	position: fixed;
-	background-color: #000000e6;
-	z-index: 100;
-
-}
-
-.cesiLogo{
-	top: 100px;
-}
-
 .container-page{
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 60px;
 	margin-left: 300px;
 	min-height: 800px;
-}
-
-.bde{
-	background: url("../img/bandeau_home.jpg") no-repeat;
-	background-size: cover;
-	width: 100%;
-	height: 50%;
-}
-
-h1 p{
-	font-family: 'Boogaloo', cursive;
-	font-size: 75%;
-}
-h1{
-	text-align: center;
-	margin: 10% 35%;
-	color: #fffc;
-	background-color: #6586bbb3;
-	height: 40%;
-	font-family: 'Bungee', cursive;
-	font-size: 3em;
-	width: 30%;
-	padding: 4% 0;
-	box-shadow: 0 0 10px 4px #1e210dc9;
-}
-
-h2{
-	font-family: 'Bungee', cursive;
 }
 
 .events-home {
@@ -259,5 +271,37 @@ h2{
 	background: rgba(255, 165, 0, 0.8);
 	height: 40px;
 	padding: 7px 0;
+}
+
+.bde{
+	background: url("https://cdn.discordapp.com/attachments/534778554156843029/537263573508947968/unknown.png") no-repeat;
+	background-size: cover;
+	padding: 10px;
+	width: 100%;
+	height: 50%;
+}
+
+.ideas{
+	background: url("https://cdn.discordapp.com/attachments/534778554156843029/537261658368770048/unknown.png") no-repeat;
+	background-size: cover;
+	padding: 10px;
+	width: 100%;
+	height: 50%;
+}
+
+.shop{
+	background: url("https://cdn.discordapp.com/attachments/534778554156843029/537219378144346142/unknown.png") no-repeat;
+	background-size: cover;
+	padding: 10px;
+	width: 100%;
+	height: 50%;
+}
+
+.events{
+	background: url("https://cdn.discordapp.com/attachments/534778554156843029/537262648719441920/unknown.png") no-repeat;
+	background-size: cover;
+	padding: 10px;
+	width: 100%;
+	height: 50%;
 }
 
