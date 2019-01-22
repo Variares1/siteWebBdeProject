@@ -16,8 +16,6 @@
         $ideas = "http://localhost/siteWebBdeProject/views/viewIdeas.html.php";
         $events = "http://localhost/siteWebBdeProject/views/viewEvents.html.php";
         $shop = "http://localhost/siteWebBdeProject/views/viewShop.html.php";
-        $signUp = "http://localhost/siteWebBdeProject/views/viewSignUp.html.php";
-        $signIn = "http://localhost/siteWebBdeProject/views/viewSignIn.html.php";
 
         ?>
 
@@ -26,8 +24,6 @@
             <a href=<?php echo $ideas ?>>ideas</a><br>
             <a href=<?php echo $events ?>>events</a><br>
             <a href=<?php echo $shop ?>>shop</a><br>
-            <a href=<?php echo $signIn ?>>Sign in</a><br>
-            <a href=<?php echo $signUp ?>>Sign up</a>
         </div>
         <div class="col2">
             Social

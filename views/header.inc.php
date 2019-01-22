@@ -30,12 +30,11 @@
     ?>
 
     <nav>
-        <li><a href=<?php echo $index ?>>home</a></li>
-        <li><a href=<?php echo $ideas ?>>ideas</a></li>
-        <li><a href=<?php echo $events ?>>events</a></li>
-        <li><a href=<?php echo $shop ?>>shop</a></li>
-        <li><a href=<?php echo $signIn ?>>Sign in</a></li>
-        <li><a href=<?php echo $signUp ?>>Sign up</a></li>
+        <li><a href=<?php echo $index ?>><i class="fas fa-home"></i> home</a></li>
+        <li><a href=<?php echo $ideas ?>><i class="far fa-lightbulb"></i> ideas</a></li>
+        <li><a href=<?php echo $events ?>><i class="far fa-calendar-alt"></i> events</a></li>
+        <li><a href=<?php echo $shop ?>><i class="fas fa-shopping-basket"></i> shop</a></li>
+        <li class="sign-home"><a href=<?php echo $signIn ?>><i class="fas fa-user"></i> Sign in/up</a></li>
     </nav>
 
     <leftMenu>
