@@ -79,6 +79,13 @@ h2{
 	font-family: 'Bungee', cursive;
 }
 
+h3{
+	text-align: center;
+	font-family: 'Bungee', cursive;
+	font-size: 2em;
+	padding: 10px;
+}
+
 /*------------------------------------------------------------------------
 --------------------------------GENERAL-END-------------------------------
 --------------------------------------------------------------------------*/
@@ -101,6 +108,10 @@ h2{
     background-size: cover;
 }
 
+.header a:hover{
+	color: #6586b9cc;
+}
+
 leftMenu{
 	top: 85px;
 	height: 100%;
@@ -108,11 +119,30 @@ leftMenu{
 	position: fixed;
 	background-color: #000000e6;
 	z-index: 100;
-
 }
 
 .cesiLogo{
 	top: 100px;
+}
+
+.shop-home {
+	background: white;
+	width: 90%;
+	margin: 5%;
+	margin-top: 15%;
+	height: 300px;
+	font-family: 'Boogaloo', cursive;
+}
+
+.shop-home p{
+	font-family: 'Bungee', cursive;
+	color: #191919;
+}
+
+.bandeau-shop-home {
+	background: rgba(255, 165, 0, 0.8);
+	height: 40px;
+	padding: 7px 0;
 }
 
 .slider {
@@ -270,26 +300,6 @@ leftMenu{
 
 }
 
-.shop-home {
-	background: white;
-	width: 90%;
-	margin: 5%;
-	margin-top: 15%;
-	height: 300px;
-	font-family: 'Boogaloo', cursive;
-}
-
-.shop-home p{
-	font-family: 'Bungee', cursive;
-	color: black;
-}
-
-.bandeau-shop-home {
-	background: rgba(255, 165, 0, 0.8);
-	height: 40px;
-	padding: 7px 0;
-}
-
 /*/\-/\-/\-/\-/\-/\-/\-/\- HOME END -/\-/\-/\-/\-/\-/\-/\-/\*/
 
 /*\/-\/-\/-\/-\/-\/-\/-\/- IDEAS START -\/-\/-\/-\/-\/-\/-\/-\/*/
@@ -327,6 +337,27 @@ leftMenu{
 }
 
 /*/\-/\-/\-/\-/\-/\-/\-/\- SHOP END -/\-/\-/\-/\-/\-/\-/\-/\*/
+
+/*\/-\/-\/-\/-\/-\/-\/-\/- SIGN START -\/-\/-\/-\/-\/-\/-\/-\/*/
+
+.sign{
+	background: url("https://c.wallhere.com/photos/76/4b/form_shape_connection_cloudy-685975.jpg!d") no-repeat;
+	background-size: cover;
+	padding: 10px;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+}
+
+.sign-panel{
+	background: rgba(255, 255, 255, 0.81);
+	width: 600px;
+	height: 600px;
+	margin: 4% 24%;
+	box-shadow: 0 0 20px #e6e6e6ba;
+}
+
+/*/\-/\-/\-/\-/\-/\-/\-/\- SIGN END -/\-/\-/\-/\-/\-/\-/\-/\*/
 
 /*------------------------------------------------------------------------
 --------------------------------CONTAINER-END-------------------------------
