@@ -14,7 +14,7 @@
         <entry file="file://$PROJECT_DIR$/views/header.inc.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="71" />
+              <caret line="26" column="60" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -67,8 +67,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/viewSign.html.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+            <state relative-caret-position="119">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -196,12 +196,12 @@
       <workItem from="1548058590898" duration="8299000" />
       <workItem from="1548070777163" duration="13357000" />
       <workItem from="1548142764555" duration="18234000" />
-      <workItem from="1548169507502" duration="2109000" />
+      <workItem from="1548169507502" duration="4054000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49854000" />
+    <option name="totallyTimeSpent" value="51799000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -383,7 +383,7 @@
     <entry file="file://$PROJECT_DIR$/views/header.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="71" />
+          <caret line="26" column="60" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="71" />
         </state>
       </provider>
     </entry>
@@ -396,8 +396,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/viewSign.html.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
