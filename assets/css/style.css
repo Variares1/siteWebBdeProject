@@ -80,7 +80,7 @@ nav .sign-home {
 	text-transform: uppercase;
     height: auto;
 	width: 100%;
-	/*top: 600px;*/
+	/*top: 800px;*/
 }
 
 #footer-content {
@@ -143,11 +143,12 @@ leftMenu{
 	top: 100px;
 }
 
-.container-home{
+.container-page{
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 60px;
 	margin-left: 300px;
+	min-height: 800px;
 }
 
 .bde{
