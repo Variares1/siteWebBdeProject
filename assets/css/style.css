@@ -115,6 +115,25 @@ leftMenu{
 	top: 100px;
 }
 
+.slider {
+
+	position: relative;
+	height: 245px;
+	margin: 10px;
+	background-color: #6586bbb3;
+
+}
+
+.carousel {
+	height: 298px;
+}
+
+.w-100 {
+
+	width: 393px !important;
+
+}
+
 /*------------------------------------------------------------------------
 --------------------------------HEADER-END-------------------------------
 --------------------------------------------------------------------------*/
@@ -162,26 +181,14 @@ leftMenu{
 	color: #7492c1;
 }
 
-.slider {
+/*------------------------------------------------------------------------
+--------------------------------FOOTER-END-------------------------------
+--------------------------------------------------------------------------*/
 
-    position: relative;
-    top: 300px;
-    width: 60%;
-    height: 300px;
-    margin: 0 20%;
-    background-color: #878787cc;
 
-}
-
-.carousel {
-	height: 298px;
-}
-
-.w-100 {
-
-    width: 393px !important;
-
-}
+/*------------------------------------------------------------------------
+--------------------------------CONTAINER-START-------------------------------
+--------------------------------------------------------------------------*/
 
 .container-page{
 	display: flex;
@@ -189,6 +196,16 @@ leftMenu{
 	margin-top: 60px;
 	margin-left: 300px;
 	min-height: 800px;
+}
+
+/*\/-\/-\/-\/-\/-\/-\/-\/- HOME START -\/-\/-\/-\/-\/-\/-\/-\/*/
+
+.bde{
+	background: url("https://cdn.discordapp.com/attachments/534778554156843029/537263573508947968/unknown.png") no-repeat;
+	background-size: cover;
+	padding: 10px;
+	width: 100%;
+	height: 50%;
 }
 
 .events-home {
@@ -273,13 +290,9 @@ leftMenu{
 	padding: 7px 0;
 }
 
-.bde{
-	background: url("https://cdn.discordapp.com/attachments/534778554156843029/537263573508947968/unknown.png") no-repeat;
-	background-size: cover;
-	padding: 10px;
-	width: 100%;
-	height: 50%;
-}
+/*/\-/\-/\-/\-/\-/\-/\-/\- HOME END -/\-/\-/\-/\-/\-/\-/\-/\*/
+
+/*\/-\/-\/-\/-\/-\/-\/-\/- IDEAS START -\/-\/-\/-\/-\/-\/-\/-\/*/
 
 .ideas{
 	background: url("https://cdn.discordapp.com/attachments/534778554156843029/537261658368770048/unknown.png") no-repeat;
@@ -289,13 +302,9 @@ leftMenu{
 	height: 50%;
 }
 
-.shop{
-	background: url("https://cdn.discordapp.com/attachments/534778554156843029/537219378144346142/unknown.png") no-repeat;
-	background-size: cover;
-	padding: 10px;
-	width: 100%;
-	height: 50%;
-}
+/*/\-/\-/\-/\-/\-/\-/\-/\- IDEAS END -/\-/\-/\-/\-/\-/\-/\-/\*/
+
+/*\/-\/-\/-\/-\/-\/-\/-\/- EVENTS START -\/-\/-\/-\/-\/-\/-\/-\/*/
 
 .events{
 	background: url("https://cdn.discordapp.com/attachments/534778554156843029/537262648719441920/unknown.png") no-repeat;
@@ -304,4 +313,22 @@ leftMenu{
 	width: 100%;
 	height: 50%;
 }
+
+/*/\-/\-/\-/\-/\-/\-/\-/\- EVENTS END -/\-/\-/\-/\-/\-/\-/\-/\*/
+
+/*\/-\/-\/-\/-\/-\/-\/-\/- SHOP START -\/-\/-\/-\/-\/-\/-\/-\/*/
+
+.shop{
+	background: url("https://cdn.discordapp.com/attachments/534778554156843029/537219378144346142/unknown.png") no-repeat;
+	background-size: cover;
+	padding: 10px;
+	width: 100%;
+	height: 50%;
+}
+
+/*/\-/\-/\-/\-/\-/\-/\-/\- SHOP END -/\-/\-/\-/\-/\-/\-/\-/\*/
+
+/*------------------------------------------------------------------------
+--------------------------------CONTAINER-END-------------------------------
+--------------------------------------------------------------------------*/
 
