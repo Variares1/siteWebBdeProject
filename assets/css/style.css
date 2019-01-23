@@ -90,6 +90,8 @@ form {
 	font-family: 'Google Sans',arial,sans-serif;
 	text-align: center;
 	font-weight: bold;
+	padding: 0 14%;
+
 }
 
 /*------------------------------------------------------------------------
@@ -374,12 +376,13 @@ leftMenu{
 .text{
 	margin: 20px 10px;
 	padding: 10px;
-	width: 60%;
+	width: 80%;
 	height: 60px;
 }
 
 .up .text{
 	height: initial;
+	width: 94%;
 }
 .upInput{
 	margin: 20px 10px;

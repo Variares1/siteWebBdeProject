@@ -6,7 +6,7 @@
                 <h3><i class="fas fa-sign-in-alt"></i> Connection</h3>
 
 <!-- ----------------------------------------SIGN IN---------------------------------------- -->
-                <form class="in" id="show" action="">
+                <form class="in" id="show" action="signIn.php">
                     <p>Sign in</p> <br>
                     <input type="email" class="text" id="email" name="email" required="required" placeholder="Email address"><br>
                     <input type="password" class="text" id="password" name="password" required="required" placeholder="Password">
@@ -15,14 +15,14 @@
                 </form>
 
 <!-- ----------------------------------------SIGN UP---------------------------------------- -->
-                <form class="up" id="hide" action="">
-                    <p>Sign up</p> <br>
+                <form class="up" id="hide" action="signUp.php">
+                    <p><i class="fas fa-user-plus"></i> Sign up</p> <br>
                     <input type="text" class="upInput" id="name" name="name" required="required" placeholder="Last name">
                     <input type="text" class="upInput" id="firstName" name="firstName" required="required" placeholder="First name"><br>
                     <input type="email" class="text" id="email" name="email" required="required" placeholder="Email address"><br>
                     <input type="password" class="upInput" id="password" name="password" required="required" placeholder="Password">
                     <input type="password" class="upInput" id="confirmPassword" name="confirmPassword" required="required" placeholder="Confirm password">
-                    <input type="button" id="signUp" value="create an account" onclick="inToUp()">
+                    <input type="button" id="signUp" value="go to login page" onclick="inToUp()">
                     <input type="submit" id="next" value="Submit">
                 </form>
             </div>
@@ -42,6 +42,30 @@
                 myUp.setAttribute("id", "hide");
             }
             return 0;
+        }
+
+        function signIn() {
+            "use strict";
+
+            $(document).ready(function () {
+                $('.in').submit(function () {
+                    $.ajax({
+                        'url': $(this).attr('action'),
+                        'method': $(this).attr('method'),
+                        'data': $(this).serialize()
+                    }).done(function (data) {
+                        if (data.success){
+
+                        }
+                        else {
+                            // data.message
+                        }
+                    }).fail(function () {
+
+                    });
+                    return false;
+                });
+            })
         }
     </script>
 
