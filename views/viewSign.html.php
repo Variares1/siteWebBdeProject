@@ -58,44 +58,44 @@
         </div>
     </div>
 
-    <script>
-        function inToUp() {
-            let myIn = document.querySelector(".in");
-            let myUp = document.querySelector(".up");
-            if(myIn.id=="show"){
-                myIn.setAttribute("id", "hide");
-                myUp.setAttribute("id", "show");
-            }
-            else if(myIn.id=="hide"){
-                myIn.setAttribute("id", "show");
-                myUp.setAttribute("id", "hide");
-            }
-            return 0;
-        }
-
-        function signIn() {
-            "use strict";
-
-            $(document).ready(function () {
-                $('.in').submit(function () {
-                    $.ajax({
-                        'url': $(this).attr('action'),
-                        'method': $(this).attr('method'),
-                        'data': $(this).serialize()
-                    }).done(function (data) {
-                        if (data.success){
-
-                        }
-                        else {
-                            // data.message
-                        }
-                    }).fail(function () {
-
-                    });
-                    return false;
-                });
-            })
-        }
-    </script>
-
 <?php require_once('footer.inc.php') ?>
+
+<script>
+    function inToUp() {
+        let myIn = document.querySelector(".in");
+        let myUp = document.querySelector(".up");
+        if(myIn.id=="show"){
+            myIn.setAttribute("id", "hide");
+            myUp.setAttribute("id", "show");
+        }
+        else if(myIn.id=="hide"){
+            myIn.setAttribute("id", "show");
+            myUp.setAttribute("id", "hide");
+        }
+        return 0;
+    }
+
+    function signIn() {
+        "use strict";
+
+        $(document).ready(function () {
+            $('.in').submit(function () {
+                $.ajax({
+                    'url': $(this).attr('action'),
+                    'method': $(this).attr('method'),
+                    'data': $(this).serialize()
+                }).done(function (data) {
+                    if (data.success){
+
+                    }
+                    else {
+                        // data.message
+                    }
+                }).fail(function () {
+
+                });
+                return false;
+            });
+        })
+    }
+</script>

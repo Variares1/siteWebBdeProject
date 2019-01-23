@@ -341,7 +341,66 @@ leftMenu{
 	background-size: cover;
 	padding: 10px;
 	width: 100%;
-	height: 50%;
+}
+
+.search-shop {
+	font-size: 0.5em;
+	font-family: 'Boogaloo', cursive;
+	margin: 25px 10px;
+}
+
+#clicked-panel {
+	transition: all 3s ease;
+	background: rgba(255, 255, 255, 0.91);
+	width: 100%;
+	height: 100%;
+	margin: unset;
+	color: #191919;
+}
+
+.submit-shop  {
+	cursor: pointer;
+	padding: 10px;
+	margin: 15px;
+	background: rgba(255, 255, 255, 0);
+	border-radius: 8px;
+	width: 70px;
+	height: 50px;
+	font-size: 0.4em;
+	border: none;
+	color: rgba(255, 255, 255, 0.91);
+	transition: all 3s ease;
+
+}
+
+.submit-shop:hover{
+	background: #ffb733;
+	transition: all 3s ease;
+}
+
+.form-shop {
+	display: flex;
+	justify-content: center;
+}
+
+#clicked-submit {
+	transition: all 3s ease;
+	background: #6288b5;
+}
+
+#clicked-submit:hover{
+	background: #ffb733;
+	transition: all 3s ease;
+}
+
+.shop h1 i{
+	color: rgba(255, 255, 255, 0);
+}
+
+#clicked-search {
+	margin: 10%;
+	color: rgba(128, 128, 128, 0.25);
+	font-size: 250px;
 }
 
 /*/\-/\-/\-/\-/\-/\-/\-/\- SHOP END -/\-/\-/\-/\-/\-/\-/\-/\*/
