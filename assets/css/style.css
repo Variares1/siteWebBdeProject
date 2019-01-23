@@ -60,7 +60,7 @@ nav .sign-home {
 h1 p{
 	font-family: 'Boogaloo', cursive;
 	font-size: 75%;
-	padding: 0 10px;
+	padding: 0 15px;
 }
 h1{
 	text-align: center;
@@ -83,7 +83,13 @@ h3{
 	text-align: center;
 	font-family: 'Bungee', cursive;
 	font-size: 2em;
-	padding: 10px;
+	padding: 15px;
+}
+
+form {
+	font-family: 'Google Sans',arial,sans-serif;
+	text-align: center;
+	font-weight: bold;
 }
 
 /*------------------------------------------------------------------------
@@ -341,7 +347,7 @@ leftMenu{
 /*\/-\/-\/-\/-\/-\/-\/-\/- SIGN START -\/-\/-\/-\/-\/-\/-\/-\/*/
 
 .sign{
-	background: url("https://c.wallhere.com/photos/76/4b/form_shape_connection_cloudy-685975.jpg!d") no-repeat;
+	background: url("https://cdn.discordapp.com/attachments/534778554156843029/537566512186130432/unknown.png") no-repeat;
 	background-size: cover;
 	padding: 10px;
 	width: 100%;
@@ -356,6 +362,73 @@ leftMenu{
 	margin: 4% 24%;
 	box-shadow: 0 0 20px #e6e6e6ba;
 }
+
+.sign h3{
+	padding: 50px 0;
+}
+
+.sign p{
+	font-weight: bold;
+}
+
+.text{
+	margin: 20px 10px;
+	padding: 10px;
+	width: 60%;
+	height: 60px;
+}
+
+.up .text{
+	height: initial;
+}
+.upInput{
+	margin: 20px 10px;
+	padding: 10px;
+}
+
+#show {
+	display: block;
+}
+
+#hide {
+	display: none;
+}
+
+/*----------------------------------------SIGN IN----------------------------------------*/
+
+#signUp {
+	background: none;
+	border: none;
+	cursor: pointer;
+	margin: 30px 20% 20px 0;
+	color: #6288b5;
+	transition: all 3s ease;
+}
+
+#signUp:hover{
+	color: #ffb733;
+	transition: all 3s ease;
+}
+
+#next {
+	cursor: pointer;
+	padding: 10px;
+	background: #6288b5;
+	border-radius: 8px;
+	width: 90px;
+	border: none;
+	color: white;
+	transition: all 3s ease;
+
+}
+
+#next:hover{
+	background: #ffb733;
+	transition: all 3s ease;
+}
+
+/*----------------------------------------SIGN UP----------------------------------------*/
+
 
 /*/\-/\-/\-/\-/\-/\-/\-/\- SIGN END -/\-/\-/\-/\-/\-/\-/\-/\*/
 
