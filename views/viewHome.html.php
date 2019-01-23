@@ -1,12 +1,5 @@
 <?php require_once('header.inc.php') ?>
 
-
-<?php
-//echo $donnees[0]->$donnee["title"];
-foreach ($donnees as $donnee) {
-    //echo $donnee["title"];
-}?>
-
 <div class="container-page">
     <div class="bde">
         <h1>BDE <br><p>Events, activities, projects and more !</p></h1>
