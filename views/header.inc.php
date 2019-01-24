@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,6 +37,15 @@
     $pageSign = 'Sign';
 
     $here = "style='color:rgba(255, 165, 0, 0.8)'";
+
+    $data[0] = 'https://pngimage.net/wp-content/uploads/2018/06/item-png-7.png';
+    $data[1] = 'https://vignette.wikia.nocookie.net/thesimssocial/images/e/ec/Hourglass_%28item%29.png/revision/latest?cb=20120802004156';
+    $data[2] = 'https://vignette.wikia.nocookie.net/thesimssocial/images/2/21/Ruby-%28item%29.png/revision/latest?cb=20121108015014';
+
+    $article1 = $data[0];
+    $article2 = $data[1];
+    $article3 = $data[2];
+
     ?>
 
     <nav>
@@ -61,13 +72,13 @@
                                 </ol>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img class="d-block w-100" src="..." alt="First slide">
+                                        <img class="d-block w-100" src="<?php echo $article1 ?>" alt="First slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="..." alt="Second slide">
+                                        <img class="d-block w-100" src="<?php echo $article2 ?>" alt="Second slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="..." alt="Third slide">
+                                        <img class="d-block w-100" src="<?php echo $article3 ?>" alt="Third slide">
                                     </div>
                                 </div>
                                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

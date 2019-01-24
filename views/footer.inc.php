@@ -26,7 +26,7 @@
             <a href=<?php echo $shop ?>>shop</a><br>
         </div>
         <div class="col2">
-            Social
+            Stay connected
             <br>
             <a href="#"><i class="fab fa-linkedin"></i></a>
             <a href="#"><i class="fab fa-youtube"></i></a>
