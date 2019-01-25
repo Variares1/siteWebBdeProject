@@ -1,0 +1,545 @@
+/*------------------------------------------------------------------------
+--------------------------------GENERAL-START-------------------------------
+--------------------------------------------------------------------------*/
+
+body{
+	text-decoration: none;
+	font-family: calibri Light;
+	margin: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+.header {
+	display: flex;
+	text-align: center;
+	height: auto;
+	width: 100%;
+}
+
+nav {
+	z-index: 99;
+	display: flex;
+	position: fixed;
+	height: 60px;
+	background-color: #000000e6;
+	width: 100%;
+	justify-content: end;
+	font-family: 'IBM Plex Mono', monospace;
+}
+
+nav img{
+	width: auto;
+	height: 100%;
+	margin: 0 20px;
+}
+
+nav li {
+	text-transform: uppercase;
+	padding: 14px;
+	list-style-type: none;
+	font-size: 1.2em;
+	margin: 0 1%;
+}
+
+nav li:hover {
+	box-shadow: 0 0 20px 0px black;
+	transition: all ease 0.5s;
+}
+
+nav .sign-home {
+	margin: 0 15%;
+}
+
+h1 p{
+	font-family: 'Boogaloo', cursive;
+	font-size: 75%;
+	padding: 0 15px;
+}
+h1{
+	text-align: center;
+	margin: 10% 35%;
+	color: #fffc;
+	background-color: #6586bbb3;
+	height: 40%;
+	font-family: 'Bungee', cursive;
+	font-size: 3em;
+	width: 30%;
+	padding: 4% 0;
+	box-shadow: 0 0 10px 4px #1e210dc9;
+}
+
+h2{
+	font-family: 'Bungee', cursive;
+}
+
+h3{
+	text-align: center;
+	font-family: 'Bungee', cursive;
+	font-size: 2em;
+	padding: 15px;
+}
+
+form {
+	font-family: 'Google Sans',arial,sans-serif;
+	text-align: center;
+	font-weight: bold;
+	padding: 0 14%;
+
+}
+
+/*------------------------------------------------------------------------
+--------------------------------GENERAL-END-------------------------------
+--------------------------------------------------------------------------*/
+
+
+
+/*------------------------------------------------------------------------
+--------------------------------HEADER-START-------------------------------
+--------------------------------------------------------------------------*/
+
+.header a {
+	text-decoration: none;
+	color: white;
+}
+
+.header .bandeau {
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header a:hover{
+	color: #6586b9cc;
+}
+
+leftMenu{
+	top: 85px;
+	height: 100%;
+	width: 300px;
+	position: fixed;
+	background-color: #000000e6;
+	z-index: 100;
+}
+
+.cesiLogo{
+	top: 100px;
+}
+
+.shop-home {
+	background: white;
+	width: 90%;
+	margin: 5%;
+	margin-top: 15%;
+	height: 300px;
+	font-family: 'Boogaloo', cursive;
+}
+
+.shop-home p{
+	font-family: 'Bungee', cursive;
+	color: #191919;
+}
+
+.bandeau-shop-home {
+	background: rgba(255, 165, 0, 0.8);
+	height: 40px;
+	padding: 7px 0;
+}
+
+.slider {
+
+	position: relative;
+	height: 245px;
+	margin: 10px;
+	background-color: #6586bbb3;
+
+}
+
+.carousel {
+	height: 298px;
+}
+
+.w-100 {
+
+	width: 393px !important;
+
+}
+
+.slider img{
+	max-width: 200px;
+	max-height: 200px;
+	margin: 25px auto;
+	z-index: 2;
+}
+
+/*------------------------------------------------------------------------
+--------------------------------HEADER-END-------------------------------
+--------------------------------------------------------------------------*/
+
+
+
+/*------------------------------------------------------------------------
+--------------------------------FOOTER-START-------------------------------
+--------------------------------------------------------------------------*/
+
+.footer {
+    position: relative;
+    z-index: 101;
+    overflow: hidden;
+    color: #a5ae4b;
+	font-family: 'IBM Plex Mono', monospace;
+	text-transform: uppercase;
+    height: auto;
+	width: 100%;
+	/*top: 800px;*/
+}
+
+#footer-content {
+    background-color: #000000;
+    color: #7492c1b3;
+    padding-top: 15px;
+	padding-bottom: 20px;
+    justify-content: space-around;
+	display: flex;
+
+}
+
+#footer-sep {
+    background-color: #7492c1b3;
+    min-height: 25px;
+}
+
+#footer-content .fab {
+    margin-top: 20px;
+    padding-right: 10px;
+    font-size: 1.5em;
+}
+
+#footer-content a{
+	color: #7492c1;
+}
+
+/*------------------------------------------------------------------------
+--------------------------------FOOTER-END-------------------------------
+--------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------
+--------------------------------CONTAINER-START-------------------------------
+--------------------------------------------------------------------------*/
+
+.container-page{
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 60px;
+	margin-left: 300px;
+	min-height: 800px;
+}
+
+/*\/-\/-\/-\/-\/-\/-\/-\/- HOME START -\/-\/-\/-\/-\/-\/-\/-\/*/
+
+.bde{
+	background: url("https://cdn.discordapp.com/attachments/534778554156843029/537263573508947968/unknown.png") no-repeat;
+	background-size: cover;
+	padding: 10px;
+	width: 100%;
+	height: 50%;
+}
+
+.events-home {
+	background: #6586b9cc;
+	width: 100%;
+	display: flex;
+	margin-top: -15px;
+	padding: 1%;
+	justify-content: space-around;
+}
+
+.events-home * {
+	margin: 1%;
+}
+
+.events-home-text {
+
+	background: white;
+	width: 650px;
+	height: 200px;
+	margin: 3% 0;
+	border-radius: 10px;
+	font-family: 'Boogaloo', cursive;
+	font-size: 1.5em;
+	padding: 1% 5%;
+
+}
+
+.ideas-home {
+	background: rgba(255, 253, 244, 0.8);
+	width: 100%;
+	height: 324px;
+	display: flex;
+	margin-top: -15px;
+	padding: 1%;
+	justify-content: space-around;
+}
+
+.idea-home-text {
+
+	background: #6586b9cc;
+	width: 650px;
+	height: 200px;
+	margin: 3% 0;
+	border-radius: 10px;
+	font-family: 'Boogaloo', cursive;
+	font-size: 1.2em;
+	padding: 1% 3%;
+
+}
+
+.activities-home-text {
+
+	background: rgba(255, 165, 0, 0.8);
+	width: 400px;
+	height: 200px;
+	margin: 3% 0;
+	border-radius: 10px;
+	font-family: 'Boogaloo', cursive;
+	font-size: 1.2em;
+	padding: 1% 3%;
+
+}
+
+/*/\-/\-/\-/\-/\-/\-/\-/\- HOME END -/\-/\-/\-/\-/\-/\-/\-/\*/
+
+/*\/-\/-\/-\/-\/-\/-\/-\/- IDEAS START -\/-\/-\/-\/-\/-\/-\/-\/*/
+
+.ideas{
+	background: url("https://cdn.discordapp.com/attachments/534778554156843029/537261658368770048/unknown.png") no-repeat;
+	background-size: cover;
+	padding: 10px;
+	width: 100%;
+	height: 50%;
+}
+
+/*/\-/\-/\-/\-/\-/\-/\-/\- IDEAS END -/\-/\-/\-/\-/\-/\-/\-/\*/
+
+/*\/-\/-\/-\/-\/-\/-\/-\/- EVENTS START -\/-\/-\/-\/-\/-\/-\/-\/*/
+
+.events{
+	background: url("https://cdn.discordapp.com/attachments/534778554156843029/537262648719441920/unknown.png") no-repeat;
+	background-size: cover;
+	padding: 10px;
+	width: 100%;
+	height: 50%;
+}
+
+.events-content{
+	background: rgba(255, 255, 255, 0.81);
+	width: 100%;
+	min-height: 400px;
+	display: flex;
+	margin-top: -15px;
+	padding: 1%;
+}
+
+.events-parent {
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.events-box {
+	background-color: rgba(255, 165, 0, 0.8);
+	text-align: center;
+	vertical-align: middle;
+	max-height: 500px;
+	width: 20rem;
+	padding: 15px;
+	border-radius: 2rem;
+	color: white;
+	margin: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.events-box img {
+	border-radius: 2rem;
+	border-top-left-radius: 2rem;
+	border-top-right-radius: 2rem;
+	width: 100%;
+	height: auto;
+}
+/*/\-/\-/\-/\-/\-/\-/\-/\- EVENTS END -/\-/\-/\-/\-/\-/\-/\-/\*/
+
+/*\/-\/-\/-\/-\/-\/-\/-\/- SHOP START -\/-\/-\/-\/-\/-\/-\/-\/*/
+
+.shop{
+	background: url("https://cdn.discordapp.com/attachments/534778554156843029/537219378144346142/unknown.png") no-repeat;
+	background-size: cover;
+	padding: 10px;
+	width: 100%;
+}
+
+.search-shop {
+	font-size: 0.5em;
+	font-family: 'Boogaloo', cursive;
+	margin: 25px 10px;
+}
+
+#clicked-panel {
+	transition: all 3s ease;
+	background: rgba(255, 255, 255, 0.91);
+	width: 100%;
+	height: 100%;
+	margin: unset;
+	color: #191919;
+}
+
+.submit-shop  {
+	cursor: pointer;
+	padding: 10px;
+	margin: 15px;
+	background: rgba(255, 255, 255, 0);
+	border-radius: 8px;
+	width: 70px;
+	height: 50px;
+	font-size: 0.4em;
+	border: none;
+	color: rgba(255, 255, 255, 0.91);
+	transition: all 3s ease;
+
+}
+
+.submit-shop:hover{
+	background: #ffb733;
+	transition: all 3s ease;
+}
+
+.form-shop {
+	display: flex;
+	justify-content: center;
+}
+
+#clicked-submit {
+	transition: all 3s ease;
+	background: #6288b5;
+}
+
+#clicked-submit:hover{
+	background: #ffb733;
+	transition: all 3s ease;
+}
+
+.shop h1 i{
+	color: rgba(255, 255, 255, 0);
+}
+
+#clicked-search {
+	margin: 5%;
+	color: rgba(128, 128, 128, 0.25);
+	font-size: 250px;
+}
+
+/*/\-/\-/\-/\-/\-/\-/\-/\- SHOP END -/\-/\-/\-/\-/\-/\-/\-/\*/
+
+/*\/-\/-\/-\/-\/-\/-\/-\/- SIGN START -\/-\/-\/-\/-\/-\/-\/-\/*/
+
+.sign{
+	background: url("https://cdn.discordapp.com/attachments/534778554156843029/537566512186130432/unknown.png") no-repeat;
+	background-size: cover;
+	padding: 10px;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+}
+
+.sign-panel{
+	background: rgba(255, 255, 255, 0.81);
+	width: 600px;
+	height: 600px;
+	margin: 4% 24%;
+	box-shadow: 0 0 20px #e6e6e6ba;
+}
+
+.sign h3{
+	padding: 50px 0;
+}
+
+.sign p{
+	font-weight: bold;
+}
+
+.text{
+	margin: 20px 10px;
+	padding: 10px;
+	width: 80%;
+	height: 60px;
+}
+
+.up .text{
+	height: initial;
+	width: 94%;
+}
+.upInput{
+	margin: 20px 10px;
+	padding: 10px;
+}
+
+#show {
+	display: block;
+}
+
+#hide {
+	display: none;
+}
+
+/*----------------------------------------SIGN IN----------------------------------------*/
+
+#signUp {
+	background: none;
+	border: none;
+	cursor: pointer;
+	margin: 30px 20% 20px 0;
+	color: #6288b5;
+	transition: all 3s ease;
+}
+
+#signUp:hover{
+	color: #ffb733;
+	transition: all 3s ease;
+}
+
+#next {
+	cursor: pointer;
+	padding: 10px;
+	background: #6288b5;
+	border-radius: 8px;
+	width: 90px;
+	border: none;
+	color: white;
+	transition: all 3s ease;
+
+}
+
+#next:hover{
+	background: #ffb733;
+	transition: all 3s ease;
+}
+
+/*----------------------------------------SIGN UP----------------------------------------*/
+
+
+/*/\-/\-/\-/\-/\-/\-/\-/\- SIGN END -/\-/\-/\-/\-/\-/\-/\-/\*/
+
+/*------------------------------------------------------------------------
+--------------------------------CONTAINER-END-------------------------------
+--------------------------------------------------------------------------*/
+
