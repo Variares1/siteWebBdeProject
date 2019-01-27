@@ -10,29 +10,45 @@
         </div>
         <div class="events-content">
             <div class="events-parent">
-                <!--                --><?php //foreach ($donnees as $events) {
-                //                    ?>
-                <!--                    <div class="events-box">-->
-                <!--                        --><?php //if(is_file($_SERVER['DOCUMENT_ROOT'].'/upload/images/'.$events->image)){ ?>
-                <!--                            <a href="http://areva-energy-storage-hydrogen.com/index.php?controller=Pages&task=afficher&part=eventsDetail&id=--><?php //echo $events->id; ?><!--"><img src="upload/images/--><?php //echo $events->image; ?><!--" alt="events"></a><br>-->
-                <!--                        --><?php //}else{ ?>
-                <!--                            <a href="--><?php //echo $events->link; ?><!--" target="_blank"><img src="upload/images/events.jpg" alt="events"></a><br>--><?php //} ?>
-                <!--                        <br>-->
-                <!--                        --><?php //$events->title = str_replace('<em>&gt;</em>', '<i class="caret-size orange fas fa-angle-right"></i>', $events->title);
-                //                        echo $events->title;?><!--<br>-->
-                <!--                        <p>-->
-                <!--                            --><?php
-                //                            $events->content = str_replace(["&nbsp;",'<em>&gt;</em>'], [" " ,'<i class="caret-size orange fas fa-angle-right"></i>'], $events->content);
-                //                            $events->content = substr($events->content, 0, 100);
-                //                            echo $events->content;
-                //                            ?>
-                <!--                            ...-->
-                <!--                        </p>-->
-                <!--                        <br>-->
-                <!--                        <a href="http://areva-energy-storage-hydrogen.com/index.php?controller=Pages&task=afficher&part=eventsDetail&id=--><?php //echo $events->id; ?><!--">+ View more</a>-->
-                <!--                    </div>-->
-                <!--                    --><?php
-                //    //            } ?>
+                <?php $data = array(
+                    'i1' => array(
+                        'id'=>1,
+                        'name'=>'lancer de nains',
+                        'image'=>'idea.png',
+                        'link'=>'http://google.com',
+                        'content'=>"hahuhud ahahh hhh adhdh ahahahh sjs as j sjsshs shss shnshs shshsbss shshshsh shshshns sjshs sjhshs cc sssz",
+                    ),
+                    'i2' => array(
+                        'id'=>2,
+                        'name'=>'tournois de pq',
+                        'image'=>'events.png',
+                        'link'=>'http://google.com',
+                        'content'=>"hahuhud ahahh hhh adhdh ahahahh sjs as j sjsshs shss shnshs shshsbss shshshsh shshshns sjshs sjhshs cc sssz",
+                    ),
+                ); ?>
+
+                <?php foreach ($data as $key => $value) {
+                    ?>
+                    <div class="events-box">
+                        <?php if(is_file('/assets/upload/'.$value['image'])){ ?>
+                            <a href="<?php echo $value['link']; ?>"><img src="../assets/upload/<?php echo $value['image']; ?>" alt="events"></a><br>
+                        <?php }else{ ?>
+                            <a href="<?php echo $value['link']; ?>" target="_blank"><img src="../assets/upload/idea.jpg" alt="events"></a><br><?php } ?>
+                        <br>
+                        <?php $value['name'] = str_replace('<em>&gt;</em>', '<i class="caret-size orange fas fa-angle-right"></i>', $value['name']);
+                        echo $value['name'];?><br>
+                        <p>
+                            <?php
+                            $value['content'] = str_replace(["&nbsp;",'<em>&gt;</em>'], [" " ,'<i class="caret-size orange fas fa-angle-right"></i>'], $value['content']);
+                            $value['content'] = substr($value['content'], 0, 100);
+                            echo $value['content'];
+                            ?>
+                            ...
+                        </p>
+                        <br>
+                        <a href="./viewTemplateIdea.html.php?page=<?php echo $key; ?>">+ View more</a>
+                    </div>
+                <?php } ?>
             </div>
         </div>
     </div>

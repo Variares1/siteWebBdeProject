@@ -39,9 +39,19 @@
         $link = $data[$page]['link'];
         $content = $data[$page]['content'];
     ?>
-
+    <title><?php echo $name; ?></title>
     <div class="container-page">
-
+        <div class="events" <?php
+        if(is_file('/assets/upload/'.$image))
+            echo 'style="background-image:url(../assets/upload/'.$image.')"';
+        else
+            echo 'style="background-image:url(../assets/upload/events.png)"';
+        ?>>
+            <h1><?php echo $name; ?></h1>
+        </div>
+        <div class="events-content">
+            <p1><?php echo $content; ?></p1>
+        </div>
     </div>
 
 <?php require_once('footer.inc.php') ?>

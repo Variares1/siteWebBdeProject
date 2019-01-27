@@ -372,10 +372,24 @@ leftMenu{
 
 .events-box img {
 	border-radius: 2rem;
-	border-top-left-radius: 2rem;
-	border-top-right-radius: 2rem;
 	width: 100%;
 	height: auto;
+}
+
+.events-content p1{
+	margin: 5% 10%;
+	font-family: 'Boogaloo', cursive;
+}
+
+.ideas i{
+	color: rgba(255, 255, 255, 0.81);
+	transition: all 1s ease;
+	font-size: 3em;
+	margin: 25px;
+}
+#clicked-heart{
+	color: red;
+	transition: all 1s ease;
 }
 /*/\-/\-/\-/\-/\-/\-/\-/\- EVENTS END -/\-/\-/\-/\-/\-/\-/\-/\*/
 

@@ -32,9 +32,6 @@
             }, 3000);
 
         }
-        // else if(myPanel.id=="hide"){
-        //     myPanel.setAttribute("id", "show");
-        // }
         if (mySb.value == '')
             setTimeout(function(){
                 mySearch.setAttribute("id", "clicked-search");
