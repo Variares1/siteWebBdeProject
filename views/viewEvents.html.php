@@ -35,7 +35,8 @@
                             'link'=>'http://google.com',
                             'content'=>"c'était encore encore encore + génial wow",
                     ),
-                )?>
+                ); ?>
+
                 <?php foreach ($data as $key => $value) {
                     ?>
                     <div class="events-box">
@@ -55,7 +56,7 @@
                             ...
                         </p>
                         <br>
-                        <a href="<?php echo $value['link']; ?>">+ View more</a>
+                        <a href="./viewTemplateEvent.html.php?page=<?php echo $key; ?>">+ View more</a>
                     </div>
             <?php } ?>
             </div>
