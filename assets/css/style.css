@@ -387,10 +387,45 @@ leftMenu{
 	font-size: 3em;
 	margin: 25px;
 }
+
 #clicked-heart{
 	color: red;
 	transition: all 1s ease;
 }
+
+#likes-button {
+	background-color: rgba(255, 255, 255, 0.81);
+	border: none;
+	border-radius: 5px;
+	font-family: 'Bungee', cursive;
+	font-size: 1.5em;
+	color: red;
+}
+
+.events-box a:last-of-type{
+	color: #6586b9;
+	background-color: rgba(255, 255, 255, 0.81);
+	font-family: 'Bungee', cursive;
+	font-size: 1em;
+	border-radius: 10px;
+	text-decoration: none;
+	transition: all 1s ease;
+}
+
+.events-box a:last-of-type:hover{
+	box-shadow: 0 0 20px black;
+	transition: all 1s ease;
+}
+
+.events-box{
+	font-family: 'Bungee', cursive;
+	font-size: 1.5em;
+}
+.events-box p{
+	font-family: 'Boogaloo', cursive;
+	font-size: 0.8em;
+}
+
 /*/\-/\-/\-/\-/\-/\-/\-/\- EVENTS END -/\-/\-/\-/\-/\-/\-/\-/\*/
 
 /*\/-\/-\/-\/-\/-\/-\/-\/- SHOP START -\/-\/-\/-\/-\/-\/-\/-\/*/

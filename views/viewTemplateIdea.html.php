@@ -26,6 +26,13 @@
     $image = $data[$page]['image'];
     $link = $data[$page]['link'];
     $content = $data[$page]['content'];
+    $likes = $data[$page]['likes'];
+
+//    if ($_POST['likes'] != null){
+//        $likes = $_POST["likes"];
+//        $data[$page]['likes'] = $likes;
+//    }
+
     ?>
     <title><?php echo $name; ?></title>
     <div class="container-page">
@@ -36,7 +43,10 @@
             echo 'style="background-image:url(../assets/upload/ideas.jpg)"';
         ?>>
             <h1><?php echo $name; ?></h1>
-            <i class="fas fa-heart" onclick="heart()"></i>
+            <label for="likes-button">
+            <i class="fas fa-heart" ></i>
+            </label>
+            <input id="likes-button" type="button" value="<?php echo $likes; ?>+" onclick="heart()">
         </div>
         <div class="events-content">
             <p1><?php echo $content; ?></p1>
@@ -46,12 +56,24 @@
 <?php require_once('footer.inc.php') ?>
 
 <script>
+
+    let likes = <?php echo $likes; ?>;
+
     function heart(){
-        let myHeart = document.querySelector(".ideas > i");
+        let myHeart = document.querySelector(".ideas > label > i");
+        let myButton = document.getElementById('likes-button');
+        let toPrint = "";
         if(myHeart.id!="clicked-heart"){
             myHeart.setAttribute("id", "clicked-heart");
+            likes+=1;
+            toPrint = likes + "-";
         }
-        else myHeart.setAttribute("id", "");
+        else {
+            myHeart.setAttribute("id", "");
+            likes-=1;
+            toPrint = likes + "+";
+        }
+        myButton.value = toPrint;
         return 0;
     }
 </script>

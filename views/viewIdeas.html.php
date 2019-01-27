@@ -31,9 +31,9 @@
                     ?>
                     <div class="events-box">
                         <?php if(is_file('/assets/upload/'.$value['image'])){ ?>
-                            <a href="<?php echo $value['link']; ?>"><img src="../assets/upload/<?php echo $value['image']; ?>" alt="events"></a><br>
+                            <a href="<?php echo $value['link']; ?>"><img src="../assets/upload/<?php echo $value['image']; ?>" alt="ideas"></a><br>
                         <?php }else{ ?>
-                            <a href="<?php echo $value['link']; ?>" target="_blank"><img src="../assets/upload/idea.jpg" alt="events"></a><br><?php } ?>
+                            <a href="<?php echo $value['link']; ?>" target="_blank"><img src="../assets/upload/ideas.jpg" alt="ideas"></a><br><?php } ?>
                         <br>
                         <?php $value['name'] = str_replace('<em>&gt;</em>', '<i class="caret-size orange fas fa-angle-right"></i>', $value['name']);
                         echo $value['name'];?><br>
