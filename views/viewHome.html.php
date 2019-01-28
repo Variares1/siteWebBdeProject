@@ -25,3 +25,4 @@
 </div>
 
 <?php require_once('footer.inc.php') ?>
+<?php require_once('cookie/cookie.php') ?>

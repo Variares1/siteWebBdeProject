@@ -16,6 +16,7 @@
         $ideas = "http://localhost/siteWebBdeProject/views/viewIdeas.html.php";
         $events = "http://localhost/siteWebBdeProject/views/viewEvents.html.php";
         $shop = "http://localhost/siteWebBdeProject/views/viewShop.html.php";
+        $mentions = "http://localhost/siteWebBdeProject/views/viewMentionsLegales.html.php";
 
         ?>
 
@@ -24,6 +25,7 @@
             <a href=<?php echo $ideas ?>>ideas</a><br>
             <a href=<?php echo $events ?>>events</a><br>
             <a href=<?php echo $shop ?>>shop</a><br>
+            <a href=<?php echo $mentions ?>>Legal Mentions</a><br>
         </div>
         <div class="col2">
             Stay connected

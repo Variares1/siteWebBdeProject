@@ -54,6 +54,7 @@
     </div>
 
 <?php require_once('footer.inc.php') ?>
+<?php include_once('../cookie/cookie.php') ?>
 
 <script>
 

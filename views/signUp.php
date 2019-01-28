@@ -1,22 +1,17 @@
 <?php
 
+include('Curl.php');
+
 $name = htmlspecialchars($_POST['name']);
 $firstName = htmlspecialchars($_POST['firstName']);
 $email = htmlspecialchars($_POST['email']);
 $password = htmlspecialchars($_POST['password']);
 $confirmPassword = htmlspecialchars($_POST['confirmPassword']);
+$center = 2; //htmlspecialchars($_POST['center']);
 
-$err0 = "not same password";
-$err1 = "7 char min";
+$curl = new Curl;
+$try = $curl->post('users',"{'name:".$name."','firstName:".$firstName."','email:".$email."','password:".$password."','centres_id:".$center."'}");
 
-$success = false;
+var_dump($try);
 
-if($password == $confirmPassword){
-    if (substr($password, 7)!= false){
-
-    }
-    else return $err1;
-}
-else return $err0;
-
-header('Location: http://localhost/siteWebBdeProject/views/viewSign.html.php');
+//header('Location: http://localhost/siteWebBdeProject/views/viewSign.html.php');
