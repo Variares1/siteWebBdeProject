@@ -5,9 +5,11 @@ let Place = function(task){
     this.place = task;
 };
 //post a new place
-Place.createPlace = function(new_place, result, sql){
+Place.createPlace = function(new_place){
 //Search the place in db
-    sql.query("Select place from places where place = ? ", new_place.place, function (err, res) {
+    return [/*sql.query(*/"INSERT INTO places (place) SELECT * FROM (SELECT ?) AS tmp WHERE NOT EXISTS (SELECT place FROM places WHERE place = ?) LIMIT 1", [new_place.place,new_place.place]];/*, function (err, res) {
+
+    /*sql.query("Select place from places where place = ? ", new_place.place, function (err, res) {
         if(err){
             console.log("error: ", err);
             result(err, null);
@@ -31,42 +33,20 @@ Place.createPlace = function(new_place, result, sql){
                 result(null, null);
             }            
         }
-    });               
+    });*/               
 };
-//return all places
-Place.getAllPlaces = function(result, sql) {
-    sql.query("Select * from places", function (err, res) {
-        if(err) {
-            console.log("error: ", err);
-            result(null, err);
-        }
-        else{
-            console.log('places : ', res);  
-            result(null, res);
-        }
-    });   
-};
-Place.getPlaceById = function(id, result, sql) {
-    sql.query("Select * from places where id = ? ", id, function (err, res) {             
-        if(err) {
-            console.log("error: ", err);
-           result(err, null);
-        }
-        else{
-            result(null, res);
-        }              
-    });
+Place.update = function(id, new_place){
+    return ["UPDATE places SET place = ? WHERE id = ?", [new_place.place, id]];
+}
+Place.getPlace = function(id){
+    if(id){
+        return ["Select * from places where id = ? ", id];
+    }
+    else{return ["Select * from places"];}
+    
 };
 //delete a place
-Place.remove = function(id, result, sql){
-    sql.query("DELETE FROM places WHERE id = ?", [id], function (err, res) {
-        if(err) {
-            console.log("error: ", err);
-            result(null, err);
-        }
-        else{
-            result(null, res);
-        }
-    }); 
+Place.remove = function(id){
+    return ["DELETE FROM places WHERE id = ?", id]; 
 };
 module.exports= Place;
