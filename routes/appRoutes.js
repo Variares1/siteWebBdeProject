@@ -8,6 +8,8 @@ let statutsCtrl = require('../controller/statutsController');
 let eventsCtrl = require('../controller/eventsController');
 let productsCtrl = require('../controller/productsController');
 let participationsCtrl = require('../controller/usersEventsController');
+let cartCtrl = require('../controller/usersProductsController');
+
 exports.router = (function() {
   let apiRouter = express.Router();
 
@@ -76,5 +78,15 @@ exports.router = (function() {
 
     apiRouter.route('/participation/list')
       .post(participationsCtrl.read_a_participation);
+
+    // apiRouter.route('/carts')
+    //   .get(cartCtrl.list_all_cart)
+    //   .post(cartCtrl.create_a_catr);
+
+    // apiRouter.route('/carts/:id')
+    //   .post(cartCtrl.read_a_cart)
+    //   .put(cartCtrl.update_a_cart)
+    //   .delete(cartCtrl.delete_a_cart);
+      
   return apiRouter;
 })();

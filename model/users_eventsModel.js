@@ -12,20 +12,21 @@ Participation.createParticipation = function(new_participation){
 };
 Participation.getParticipation = function(new_participation){
 	if(new_participation!=null){
-		if(new_participation.users_id==null && new_participation.events_id==null){
-			return["Select * from users_events"];
-		}
-	    else if(new_participation.users_id==null){
-	        return ["Select * from users_events where users_id = ? ", new_participation.events_id];
+		if(new_participation.users_id==null){
+	        return ["Select * from users_events where events_id = ? ", new_participation.events_id];
 	    }
 	    else if(new_participation.events_id==null){
-	    	return["Select * from users_events where events_id = ? ", new_participation.users_id];
+	    	return["Select * from users_events where users_id = ? ", new_participation.users_id];
+	    }
+	    else{
+	    	return ["Select * from users_events where events_id = ? AND users_id = ?", 
+	    		[new_participation.events_id, new_participation.users_id]];
 	    }
 	}
-    else{
-    	return ["Select * from users_events where events_id = ? AND users_id = ?", 
-    		[new_participation.events_id, new_participation.users_id]];
-    }
+	else{
+		return["Select * from users_events"];
+	}
+    
     
 };
 //delete a participation
