@@ -15,8 +15,8 @@ module.exports = {
 	    if(req.body.name!=null && req.body.description!=null && req.body.date!=null && req.body.price!=null && req.body.p_t!=null && req.body.p_r==null && req.body.places_id!=null){
 	    	choix = 0;
 	    }
-	   	if(req.body.name==null || req.body.description==null){
-		    return res.status(400).json({ 'error':'missing parameters' });
+		if(req.body.name==null || req.body.description==null){
+			return res.status(400).json({ 'error':'missing parameters' });
 		}
 	    if(users[1]<0 || users[0]==''){
 	      return res.status(400).json({'error':'wrong token'});

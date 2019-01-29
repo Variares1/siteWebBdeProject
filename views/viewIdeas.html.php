@@ -20,43 +20,46 @@
             }
             else {
 
-                $data = $curl->getT('events','',$_SESSION["token"]);
+                $try = $curl->getT('events','',$_SESSION["token"]);
 
-                var_dump($data);
+                $data = json_decode($try, true);
 
-                $data = array(
+//                var_dump($data);
 
-                'i1' => array(
-                        'id'=>1,
-                        'name'=>'lancer de nains',
-                        'image'=>'idea.png',
-                        'link'=>'http://google.com',
-                        'content'=>"hahuhud ahahh hhh adhdh ahahahh sjs as j sjsshs shss shnshs shshsbss shshshsh shshshns sjshs sjhshs cc sssz",
-                    ),
-                    'i2' => array(
-                        'id'=>2,
-                        'name'=>'tournois de pq',
-                        'image'=>'events.png',
-                        'link'=>'http://google.com',
-                        'content'=>"hahuhud ahahh hhh adhdh ahahahh sjs as j sjsshs shss shnshs shshsbss shshshsh shshshns sjshs sjhshs cc sssz",
-                    ),
-                ); ?>
+//                $data = array(
+//
+//                'i1' => array(
+//                        'id'=>1,
+//                        'name'=>'lancer de nains',
+//                        'image'=>'idea.png',
+//                        'link'=>'http://google.com',
+//                        'content'=>"hahuhud ahahh hhh adhdh ahahahh sjs as j sjsshs shss shnshs shshsbss shshshsh shshshns sjshs sjhshs cc sssz",
+//                    ),
+//                    'i2' => array(
+//                        'id'=>2,
+//                        'name'=>'tournois de pq',
+//                        'image'=>'events.png',
+//                        'link'=>'http://google.com',
+//                        'content'=>"hahuhud ahahh hhh adhdh ahahahh sjs as j sjsshs shss shnshs shshsbss shshshsh shshshns sjshs sjhshs cc sssz",
+//                    ),
+//                );
+                ?>
 
                 <?php foreach ($data as $key => $value) {
                     ?>
                     <div class="events-box">
-                        <?php if(is_file('/assets/upload/'.$value['image'])){ ?>
-                            <a href="<?php echo $value['link']; ?>"><img src="../assets/upload/<?php echo $value['image']; ?>" alt="ideas"></a><br>
-                        <?php }else{ ?>
-                            <a href="<?php echo $value['link']; ?>" target="_blank"><img src="../assets/upload/ideas.jpg" alt="ideas"></a><br><?php } ?>
+<!--                        --><?php //if(is_file('/assets/upload/'.$value['image'])){ ?>
+<!--                            <a href="--><?php //echo $value['link']; ?><!--"><img src="../assets/upload/--><?php //echo $value['image']; ?><!--" alt="ideas"></a><br>-->
+<!--                        --><?php //}else{ ?>
+                            <a href="<?php echo $value['link']; ?>" target="_blank"><img src="../assets/upload/ideas.jpg" alt="ideas"></a><br><?php //} ?>
                         <br>
                         <?php $value['name'] = str_replace('<em>&gt;</em>', '<i class="caret-size orange fas fa-angle-right"></i>', $value['name']);
                         echo $value['name'];?><br>
                         <p>
                             <?php
-                            $value['content'] = str_replace(["&nbsp;",'<em>&gt;</em>'], [" " ,'<i class="caret-size orange fas fa-angle-right"></i>'], $value['content']);
-                            $value['content'] = substr($value['content'], 0, 100);
-                            echo $value['content'];
+                            $value['description'] = str_replace(["&nbsp;",'<em>&gt;</em>'], [" " ,'<i class="caret-size orange fas fa-angle-right"></i>'], $value['description']);
+                            $value['description'] = substr($value['description'], 0, 100);
+                            echo $value['description'];
                             ?>
                             ...
                         </p>
