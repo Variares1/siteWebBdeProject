@@ -21,7 +21,11 @@ if(isset($role)){
     $_SESSION["session"]=$role;
     $_SESSION["token"]=$token;
 
+    header('Location: http://localhost/siteWebBdeProject/');
 }
+
+else
+    header('Location: http://localhost/siteWebBdeProject/views/viewSign.html.php?c=0');
 
 //$data2 = '{"id":"'.$email.'"}';
 //
@@ -47,5 +51,5 @@ if(isset($role)){
 //echo '<br>';
 //var_dump($_SESSION["firstName"]);
 
-header('Location: http://localhost/siteWebBdeProject/');
+
 

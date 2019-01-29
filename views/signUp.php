@@ -9,9 +9,11 @@ $password = htmlspecialchars($_POST['password']);
 $confirmPassword = htmlspecialchars($_POST['confirmPassword']);
 $center = htmlspecialchars($_POST['center']);
 
-$curl = new Curl;
-$try = $curl->post('users',"{'name:".$name."','firstName:".$firstName."','email:".$email."','password:".$password."','centres_id:".$center."'}");
+//{'name:".$name."','firstName:".$firstName."','email:".$email."','password:".$password."','centres_id:".$center."'}
+$data = '{"name":"'.$name.'","firstName":"'.$firstName.'","email":"'.$email.'","centres_id":"'.$center.'","password":"'.$password.'"}';
 
-var_dump($try);
+$try = $curl->post('users',$data);
 
-//header('Location: http://localhost/siteWebBdeProject/views/viewSign.html.php');
+$array = json_decode($try, true);
+
+header('Location: http://localhost/siteWebBdeProject/views/viewSign.html.php?c=0');

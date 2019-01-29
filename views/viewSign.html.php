@@ -14,6 +14,12 @@
                     <input type="submit" id="next" value="Submit">
                 </form>
 
+                <?php
+                if (isset($_GET['c']))
+                    if ($_GET['c'] == 0)
+                        echo '<script>alert("wrong email or password")</script>';
+                ?>
+
 <!-- ----------------------------------------SIGN UP---------------------------------------- -->
                 <form action="signUp.php" class="up" id="hide" method="post">
                     <p><i class="fas fa-user-plus"></i> Sign up</p> <br>
