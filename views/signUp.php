@@ -16,4 +16,4 @@ $try = $curl->post('users',$data);
 
 $array = json_decode($try, true);
 
-header('Location: http://localhost/siteWebBdeProject/views/viewSign.html.php?c=0');
+header('Location: http://localhost/siteWebBdeProject/views/viewSign.html.php?');

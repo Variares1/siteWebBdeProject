@@ -19,12 +19,26 @@ class Curl {
         return $result;
     }
 
-    public function getT($road, $data, $token){
+    public function getT($road, $token){
 
         $url = 'http://localhost:8080/'.$road;
 
         $ch = curl_init($url);
-        $authorization = $token; //"Authorization: Bearer 080042cad6356ad5dc0a720c18b53b8e53d4c274";
+        $authorization = "Authorization: Bearer ".$token;
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json' , $authorization ));
+
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $result = curl_exec($ch);
+        return $result;
+    }
+
+    public function getTD($road, $data, $token){
+
+        $url = 'http://localhost:8080/'.$road;
+
+        $ch = curl_init($url);
+        $authorization = "Authorization: Bearer ".$token;
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json' , $authorization ));
         $data_string= json_encode($data);
         //curl_setopt ($ch, CURLOPT_URL, $url / oauth2 / token);

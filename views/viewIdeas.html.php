@@ -1,4 +1,6 @@
-<?php require_once('header.inc.php') ?>
+<?php
+    require_once('header.inc.php');
+?>
 
     <div class="container-page">
         <div class="ideas">
@@ -13,14 +15,14 @@
             <?php
 
             if (!isset($_SESSION["session"])){
+                echo '<script>alert("Please login in order to see this content")</script>';
                 echo '<a href="http://localhost/siteWebBdeProject/views/viewSign.html.php"><h2>> Before, please login <</h2></a>';
             }
             else {
 
-                $role = $_SESSION["session"];
+                $data = $curl->getT('events','',$_SESSION["token"]);
 
-                if ($role == 0)
-                    ;
+                var_dump($data);
 
                 $data = array(
 
