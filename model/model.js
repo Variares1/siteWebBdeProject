@@ -6,8 +6,8 @@ let jwt = require('jsonwebtoken');
 const jwt_sign_secret ='fiqjrovgeqb87fzebhdujfj4r4b83ed4fbn484fz8g4r6f4b48d6s4cdv4t8bsfbfd5dsq64n8484hnb5c';
 
 module.exports = {
-	generateToken:function(email, statuts){
-		return jwt.sign({ email: email, statuts_id: statuts}, 
+	generateToken:function(email, statuts, id){
+		return jwt.sign({ id : id, email: email, statuts_id: statuts}, 
                 jwt_sign_secret,
                 {
                   expiresIn:"1h"
@@ -20,15 +20,17 @@ module.exports = {
 		let token = module.exports.parseAuthorization(authorization);
 		let statuts = -1;
 		let email = '';
+		let id = -1;
 		if(token !=null){
 			try{
 				let jwtToken = jwt.verify(token, jwt_sign_secret);
 				if(jwtToken != null){
+					id = jwtToken.id;
 					email = jwtToken.email;
 					statuts = jwtToken.statuts_id;
 				}
 			} catch(err) {}
 		}
-		return [email,statuts];
+		return [email,statuts,id];
 	}
 }

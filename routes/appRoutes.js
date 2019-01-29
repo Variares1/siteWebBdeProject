@@ -5,6 +5,9 @@ let usersCtrl = require('../controller/usersController');
 let centresCtrl = require('../controller/centresController');
 let placesCtrl = require('../controller/placesController');
 let statutsCtrl = require('../controller/statutsController');
+let eventsCtrl = require('../controller/eventsController');
+let productsCtrl = require('../controller/productsController');
+let participationsCtrl = require('../controller/usersEventsController');
 exports.router = (function() {
   let apiRouter = express.Router();
 
@@ -43,5 +46,35 @@ exports.router = (function() {
     apiRouter.route('/status/:id')
       .get(statutsCtrl.read_a_statut);
 
+    apiRouter.route('/events')
+      .get(eventsCtrl.list_all_events)
+      .post(eventsCtrl.create_a_event);
+
+    apiRouter.route('/events/:id')
+      .get(eventsCtrl.read_a_event)
+      .put(eventsCtrl.update_a_event)
+      .delete(eventsCtrl.delete_a_event);
+
+    apiRouter.route('/products')
+      .get(productsCtrl.list_all_products)
+      .post(productsCtrl.create_a_product);
+
+    apiRouter.route('/products/common')
+      .get(productsCtrl.common_product);
+
+    apiRouter.route('/products/:id')
+      .get(productsCtrl.read_a_product)
+      .put(productsCtrl.update_a_product)
+      .delete(productsCtrl.delete_a_product);
+
+    apiRouter.route('/participation')
+      .get(participationsCtrl.list_all_participation)
+      .post(participationsCtrl.create_a_participation);
+
+    apiRouter.route('/participation/delete')
+      .post(participationsCtrl.delete_a_participation);
+
+    apiRouter.route('/participation/list')
+      .post(participationsCtrl.read_a_participation);
   return apiRouter;
 })();
