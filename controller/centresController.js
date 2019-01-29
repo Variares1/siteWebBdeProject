@@ -48,7 +48,11 @@ module.exports = {
 	    let param = center.getCenter(req.params.id);
 	    sql.exec(param[0], param[1], function(err, centre) {
 	      	if (err){res.json(err);}
+<<<<<<< HEAD
 	    	else if(centre==null){res.status(404).json({'error':'center not found'});}
+=======
+	    	else if(Object.getOwnPropertyNames(centre).length==1){res.status(404).json({'error':'center not found'});}
+>>>>>>> master
 	   		else{console.log(centre);res.json(centre);}
 	    });
 	    
@@ -61,10 +65,17 @@ module.exports = {
 	      return res.status(400).json({'error':'wrong token'});
 	    }
 	    if(users[0]==3){
+<<<<<<< HEAD
 	    	let param = center.update([req.params.id, req.body.center]);
 	    	sql.exec(param[0], param[1], function(err, centre) {
 		      if (err){res.json(err);}
 		      else if(centre==null){res.status(404).json({'error':'center not found'});}
+=======
+	    	let param = center.update(req.params.id, req.body.center);
+	    	sql.exec(param[0], param[1], function(err, centre) {
+		      if (err){res.json(err);}
+		      else if(Object.getOwnPropertyNames(centre).length==1){res.status(404).json({'error':'center not found'});}
+>>>>>>> master
 		      else{res.status(201).json({ 'message': 'center successfully updated' });}
 		    });
 	    }
@@ -84,7 +95,11 @@ module.exports = {
 	    	let param = center.remove( req.params.id);
 	    	sql.exec(param[0], param[1], function(err, centre) {
 		      if (err){res.json(err);}
+<<<<<<< HEAD
 		      else if(centre==null){res.status(404).json({'error':'center not found'});}
+=======
+		      else if(Object.getOwnPropertyNames(centre).length==1){res.status(404).json({'error':'center not found'});}
+>>>>>>> master
 		      else{res.status(201).json({ 'message': 'center successfully deleted' });}
 		    });
 	    }
