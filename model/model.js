@@ -10,13 +10,6 @@ module.exports = {
 		return jwt.sign({ email: email, statuts_id: statuts}, 
                 jwt_sign_secret,
                 {
-<<<<<<< HEAD
-                  expiresIn:'1'
-                });
-	},
-	parseAuthorization:function(authorization){
-		return (authorization!=null)? authorization.replace('Bearer', ''):null;
-=======
                   expiresIn:"1h"
                 });
 	},
@@ -37,6 +30,5 @@ module.exports = {
 			} catch(err) {}
 		}
 		return [email,statuts];
->>>>>>> master
 	}
 }

@@ -1,35 +1,16 @@
 'use strict';
 //imports
 let bcrypt = require('bcryptjs');
-<<<<<<< HEAD
-//let jwt = require('jsonwebtoken');
-=======
->>>>>>> master
 let user = require('../model/usersModel.js');
 let sql = require('../model/db.js');
 let jwt = require('../model/model');
 
 // Constants
 const EMAIL_REGEX     = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-<<<<<<< HEAD
-const PASSWORD_REGEX  = /^(?=.*\d).{4,8}$/;
-//const jwt_sign_secret ='fiqjrovgeqb87fzebhdujfj4r4b83ed4fbn484fz8g4r6f4b48d6s4cdv4t8bsfbfd5dsq64n8484hnb5c';
-
-module.exports = {
-  list_all_users:function(req, res) {
-<<<<<<< HEAD
-    user.getAllUsers(function(err, user) {
-      if (err)
-        res.json(err);
-      res.json(user);
-    },sql);
-=======
-=======
 const PASSWORD_REGEX  = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
 
 module.exports = {
   list_all_users:function(req, res) {
->>>>>>> master
     //getting auth header
     let headerAuth = req.headers['authorization'];
     let users = jwt.getUserStatuts(headerAuth);
@@ -48,10 +29,6 @@ module.exports = {
     else{
       return res.status(400).json({'error':'you don t have the authorization'});
     }
-<<<<<<< HEAD
->>>>>>> sebastien
-=======
->>>>>>> master
   },
 
   create_a_user:function(req, res) { 
@@ -64,11 +41,7 @@ module.exports = {
     }
 
     else if (!PASSWORD_REGEX.test(req.body.password)) {
-<<<<<<< HEAD
-        return res.status(400).json({ 'error': 'password invalid (must length 4 - 8 and include 1 number at least)' });
-=======
         return res.status(400).json({ 'error': 'password invalid (must length 6 - 12 and include 1 number and 1 upper case at least)' });
->>>>>>> master
     }
     else{
         let new_user = new user(req.body);
@@ -88,30 +61,6 @@ module.exports = {
   },
 
   read_a_user:function(req, res) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    let test = EMAIL_REGEX.test(req.params.id);
-    user.getUserById(1, /*null,*/ req.params.id, test,  function(err, user) {
-      if (err)
-        res.json(err);
-      res.json(user);
-    },sql);
-  },
-
-  update_a_user:function(req, res) {
-    if(req.body.name!=null|| req.body.firstName!=null || req.body.email!=null){
-      if(req.body.email!=null){res.status(400).json({'error':'can not modify your email'});}
-      if(req.body.name!=null){res.status(400).json({'error':'can not modify your name'});}
-      if(req.body.firstName!=null){res.status(400).json({'error':'can not modify your fisrt name'});}
-    }
-    else if(req.body.password!=null || req.body.centres_id!=null || req.body.statuts_id!=null){
-      if(req.body.password!=null){
-        if (!PASSWORD_REGEX.test(req.body.password)) {
-          return res.status(400).json({ 'error': 'password invalid (must length 4 - 8 and include 1 number at least)' });
-        }
-=======
-=======
->>>>>>> master
     let headerAuth = req.headers['authorization'];
     let users = jwt.getUserStatuts(headerAuth);
     if(users[1]<0 || users[0]==''){
@@ -122,11 +71,7 @@ module.exports = {
       let param = user.getUser(req.params.id, 1, test);
       sql.exec(param[0], param[1], function(err, user) {
           if (err){res.json(err);}
-<<<<<<< HEAD
-          else if(user==null){res.status(404).json({'error':'user not found'});}
-=======
           else if(Object.getOwnPropertyNames(user).length==1){res.status(404).json({'error':'user not found'});}
->>>>>>> master
           else{res.json(user);}
       });
       /*user.getUserById(1, req.params.id, test,  function(err, user) {
@@ -166,11 +111,7 @@ module.exports = {
         let param = user.update(req.params.id, req.body);
         sql.exec(param[0], param[1], function(err, user) {
           if (err){res.json(err);}
-<<<<<<< HEAD
-          else if(user==null){res.status(404).json({'error':'center not found'});}
-=======
           else if(Object.getOwnPropertyNames(user).length==1){res.status(404).json({'error':'user not found'});}
->>>>>>> master
           else{res.status(201).json({ 'message': 'user successfully updated' });}
         });
         /*user.updateById(req.params.id, new_user, function(err, user) {
@@ -187,11 +128,6 @@ module.exports = {
         if(req.body.firstName!=null){res.status(400).json({'error':'can not modify your fisrt name'});}
         if(req.body.centres_id!=null){res.status(400).json({'error':'can not modify your centre (ask to a BDE members)'});}
         if(req.body.statuts_id!=null){res.status(400).json({'error':'can not modify your status'});}
-<<<<<<< HEAD
->>>>>>> sebastien
-      }
-      //bcrypt.hash(req.body.password,5,function(err, bcryptPassword){
-=======
       }
       else if(req.body.password!=null ){
         if(req.body.password!=null){
@@ -199,54 +135,24 @@ module.exports = {
             return res.status(400).json({ 'error': 'password invalid (must length 6 - 12 and include 1 upper case and 1 number at least)' });
           }
         }
->>>>>>> master
         let new_user = new user(req.body);
         if(req.body.password!=null){
           new_user.password=bcrypt.hashSync(req.body.password,10);
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-        user.updateById(req.params.id, new_user, function(err, user) {
-          if (err)
-            res.json(err);
-          res.status(201).json({'update':'update success'});
-        }, sql);
-      //});
-=======
-        let param = user.update(req.params.id, req.body);
-        sql.exec(param[0], param[1], function(err, user) {
-          if (err){res.json(err);}
-          else if(user==null){res.status(404).json({'error':'center not found'});}
-=======
         let param = user.update(req.params.id, req.body);
         sql.exec(param[0], param[1], function(err, user) {
           if (err){res.json(err);}
           else if(Object.getOwnPropertyNames(user).length==1){res.status(404).json({'error':'user not found'});}
->>>>>>> master
           else{res.status(201).json({ 'message': 'user successfully updated' });}
         });
       }
     }
     else{
       return res.status(400).json({'error':'you don t have the authorization'});
-<<<<<<< HEAD
->>>>>>> sebastien
-=======
->>>>>>> master
     }
   },
 
   delete_a_user:function(req, res) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    user.remove( req.params.id, function(err, user) {
-      if (err)
-        res.json(err);
-      res.json({ message: 'user successfully deleted' });
-    }, sql);
-=======
-=======
->>>>>>> master
     let headerAuth = req.headers['authorization'];
     let users = jwt.getUserStatuts(headerAuth);
     if(users[1]<0 || users[0]==''){
@@ -256,11 +162,7 @@ module.exports = {
       let param = user.remove( req.params.id);
       sql.exec(param[0], param[1], function(err, user) {
         if (err){res.json(err);}
-<<<<<<< HEAD
-        else if(user==null){res.status(404).json({'error':'user not found'});}
-=======
         else if(Object.getOwnPropertyNames(user).length==1){res.status(404).json({'error':'user not found'});}
->>>>>>> master
         else{res.status(201).json({ 'message': 'user successfully deleted' });}
       });
       /*user.remove( req.params.id, function(err, user) {
@@ -272,10 +174,6 @@ module.exports = {
     else{
       return res.status(400).json({'error':'you don t have the authorization'});
     }  
-<<<<<<< HEAD
->>>>>>> sebastien
-=======
->>>>>>> master
   },
   sign_in:function(req, res){
     if(req.body.password==null || req.body.id==null){
@@ -290,11 +188,7 @@ module.exports = {
           if (err){
             res.json(err);
           }
-<<<<<<< HEAD
-          else if(user[0]==null){
-=======
           else if(Object.getOwnPropertyNames(user).length==1){
->>>>>>> master
             return res.status(404).json({'error':'Authentication failed. User not found'})
           }
           else{
@@ -304,20 +198,7 @@ module.exports = {
               return res.status(403).json({'error':'Authentication failed. Wrong password'})
             }
             else{
-<<<<<<< HEAD
-<<<<<<< HEAD
-              /*return res.json({token: jwt.sign({ email: req.body.id, statuts_id: user[0].statuts_id}, 
-                jwt_sign_secret,
-                {
-                  expiresIn:'1'
-                })});*/
-                return res.json({token: jwt.generateToken(req.body.id,user[0].statuts_id)});
-=======
                 return [res.json({token: jwt.generateToken(req.body.id,user[0].statuts_id)}),, user[0].statuts_id];
->>>>>>> sebastien
-=======
-                return [res.json({token: jwt.generateToken(req.body.id,user[0].statuts_id)}),, user[0].statuts_id];
->>>>>>> master
             }
           }
         }/*,sql*/);
@@ -327,9 +208,6 @@ module.exports = {
       }
     }
     
-<<<<<<< HEAD
-  }
-=======
   },
   /*get_user_profile:function(req, res){
     //getting auth header
@@ -349,5 +227,4 @@ module.exports = {
       return res.status(400).json({'error':'email is not valid'});
     }
   }*/
->>>>>>> master
 }

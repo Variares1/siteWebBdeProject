@@ -2,12 +2,9 @@
 //import
 let express = require('express');
 let usersCtrl = require('../controller/usersController');
-<<<<<<< HEAD
-=======
 let centresCtrl = require('../controller/centresController');
 let placesCtrl = require('../controller/placesController');
 let statutsCtrl = require('../controller/statutsController');
->>>>>>> master
 exports.router = (function() {
   let apiRouter = express.Router();
 
@@ -23,8 +20,6 @@ exports.router = (function() {
   apiRouter.route('/users/signin')
     .post(usersCtrl.sign_in);
 
-<<<<<<< HEAD
-=======
   //centres Routes
   apiRouter.route('/centre')
     .post(centresCtrl.create_a_center)
@@ -48,6 +43,5 @@ exports.router = (function() {
     apiRouter.route('/status/:id')
       .get(statutsCtrl.read_a_statut);
 
->>>>>>> master
   return apiRouter;
 })();

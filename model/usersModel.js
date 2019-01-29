@@ -1,12 +1,7 @@
 'user strict';
 
-<<<<<<< HEAD
-//Task object constructor
-var User = function(task){
-=======
 //user object constructor
 let User = function(task){
->>>>>>> master
     this.name = task.name;
     this.firstName = task.firstName;
     this.email = task.email;
@@ -16,20 +11,10 @@ let User = function(task){
     console.log(this.name);
 };
 //post a new user
-<<<<<<< HEAD
-<<<<<<< HEAD
-User.createUser = function createUser(email,newUser, result, sql) {
-=======
-=======
->>>>>>> master
 User.createUser = function(newUser) {
     return ["INSERT INTO users (name, firstName, email, password, centres_id, statuts_id) SELECT ?, ?, ?, ?, ?, ? AS tmp WHERE NOT EXISTS (SELECT email FROM users WHERE email = ?)",
         [newUser.name, newUser.firstName, newUser.email, newUser.password, newUser.centres_id, 1, newUser.email]];/*, function (err, res) {
 
-<<<<<<< HEAD
->>>>>>> sebastien
-=======
->>>>>>> master
 //Search the user in db
     /*sql.query("Select email from users where email = ? ", email, function (err, res) {
         console.log(Object.getOwnPropertyNames(res).length);
@@ -58,12 +43,6 @@ User.createUser = function(newUser) {
     });*/
                
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-User.getUserById = function getUser(choix/*, hpassword*/, id, test, result, sql) {
-=======
-=======
->>>>>>> master
 User.getUser = function(id, choix, test){
     if(id){
         if(choix==1){
@@ -83,10 +62,6 @@ User.getUser = function(id, choix, test){
     }  
 }
 /*User.getUserById = function(choix, id, test, result, sql) {
-<<<<<<< HEAD
->>>>>>> sebastien
-=======
->>>>>>> master
     if(choix==1){
         if(test == false){
             sql.query("Select * from users where id = ? ", id, function (err, res) {             
@@ -126,11 +101,7 @@ User.getUser = function(id, choix, test){
     }      
 };
 //return all users
-<<<<<<< HEAD
-User.getAllUsers = function getAllUsers(result, sql) {
-=======
 User.getAllUsers = function(result, sql) {
->>>>>>> master
     sql.query("Select * from users", function (err, res) {
         if(err) {
             console.log("error: ", err);
