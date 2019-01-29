@@ -10,25 +10,10 @@ module.exports = {
 		return jwt.sign({ email: email, statuts_id: statuts}, 
                 jwt_sign_secret,
                 {
-                  expiresIn:"1h"
+                  expiresIn:'1'
                 });
 	},
 	parseAuthorization:function(authorization){
-		return (authorization!=null)? authorization.replace('Bearer ', ''):null;
-	},
-	getUserStatuts:function(authorization){
-		let token = module.exports.parseAuthorization(authorization);
-		let statuts = -1;
-		let email = '';
-		if(token !=null){
-			try{
-				let jwtToken = jwt.verify(token, jwt_sign_secret);
-				if(jwtToken != null){
-					email = jwtToken.email;
-					statuts = jwtToken.statuts_id;
-				}
-			} catch(err) {}
-		}
-		return [email,statuts];
+		return (authorization!=null)? authorization.replace('Bearer', ''):null;
 	}
 }

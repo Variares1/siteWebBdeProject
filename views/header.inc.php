@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php
+    session_start();
+    include('Curl.php');
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,6 +40,11 @@
     $pageSign = 'Sign';
 
     $here = "style='color:rgba(255, 165, 0, 0.8)'";
+
+//    $curl = new Curl;
+//    $try = $curl->get('shop');
+//
+//    var_dump($try);
 
     $data[0] = 'https://pngimage.net/wp-content/uploads/2018/06/item-png-7.png';
     $data[1] = 'https://vignette.wikia.nocookie.net/thesimssocial/images/e/ec/Hourglass_%28item%29.png/revision/latest?cb=20120802004156';

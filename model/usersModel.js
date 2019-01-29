@@ -1,7 +1,7 @@
 'user strict';
 
-//user object constructor
-let User = function(task){
+//Task object constructor
+var User = function(task){
     this.name = task.name;
     this.firstName = task.firstName;
     this.email = task.email;
@@ -11,7 +11,7 @@ let User = function(task){
     console.log(this.name);
 };
 //post a new user
-User.createUser = function(email,newUser, result, sql) {
+User.createUser = function createUser(email,newUser, result, sql) {
 //Search the user in db
     sql.query("Select email from users where email = ? ", email, function (err, res) {
         console.log(Object.getOwnPropertyNames(res).length);
@@ -40,7 +40,7 @@ User.createUser = function(email,newUser, result, sql) {
     });
                
 };
-User.getUserById = function(choix/*, hpassword*/, id, test, result, sql) {
+User.getUserById = function getUser(choix/*, hpassword*/, id, test, result, sql) {
     if(choix==1){
         if(test == false){
             sql.query("Select * from users where id = ? ", id, function (err, res) {             
@@ -80,7 +80,7 @@ User.getUserById = function(choix/*, hpassword*/, id, test, result, sql) {
     }      
 };
 //return all users
-User.getAllUsers = function(result, sql) {
+User.getAllUsers = function getAllUsers(result, sql) {
     sql.query("Select * from users", function (err, res) {
         if(err) {
             console.log("error: ", err);
