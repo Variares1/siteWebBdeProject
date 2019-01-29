@@ -71,7 +71,7 @@ module.exports = {
       let param = user.getUser(req.params.id, 1, test);
       sql.exec(param[0], param[1], function(err, user) {
           if (err){res.json(err);}
-          else if(user==null){res.status(404).json({'error':'user not found'});}
+          else if(Object.getOwnPropertyNames(user).length==1){res.status(404).json({'error':'user not found'});}
           else{res.json(user);}
       });
       /*user.getUserById(1, req.params.id, test,  function(err, user) {
@@ -111,7 +111,7 @@ module.exports = {
         let param = user.update(req.params.id, req.body);
         sql.exec(param[0], param[1], function(err, user) {
           if (err){res.json(err);}
-          else if(user==null){res.status(404).json({'error':'center not found'});}
+          else if(Object.getOwnPropertyNames(user).length==1){res.status(404).json({'error':'user not found'});}
           else{res.status(201).json({ 'message': 'user successfully updated' });}
         });
         /*user.updateById(req.params.id, new_user, function(err, user) {
@@ -142,7 +142,7 @@ module.exports = {
         let param = user.update(req.params.id, req.body);
         sql.exec(param[0], param[1], function(err, user) {
           if (err){res.json(err);}
-          else if(user==null){res.status(404).json({'error':'center not found'});}
+          else if(Object.getOwnPropertyNames(user).length==1){res.status(404).json({'error':'user not found'});}
           else{res.status(201).json({ 'message': 'user successfully updated' });}
         });
       }
@@ -162,7 +162,7 @@ module.exports = {
       let param = user.remove( req.params.id);
       sql.exec(param[0], param[1], function(err, user) {
         if (err){res.json(err);}
-        else if(user==null){res.status(404).json({'error':'user not found'});}
+        else if(Object.getOwnPropertyNames(user).length==1){res.status(404).json({'error':'user not found'});}
         else{res.status(201).json({ 'message': 'user successfully deleted' });}
       });
       /*user.remove( req.params.id, function(err, user) {
@@ -188,7 +188,7 @@ module.exports = {
           if (err){
             res.json(err);
           }
-          else if(user[0]==null){
+          else if(Object.getOwnPropertyNames(user).length==1){
             return res.status(404).json({'error':'Authentication failed. User not found'})
           }
           else{

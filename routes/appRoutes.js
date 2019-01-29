@@ -4,6 +4,7 @@ let express = require('express');
 let usersCtrl = require('../controller/usersController');
 let centresCtrl = require('../controller/centresController');
 let placesCtrl = require('../controller/placesController');
+let statutsCtrl = require('../controller/statutsController');
 exports.router = (function() {
   let apiRouter = express.Router();
 
@@ -35,6 +36,12 @@ exports.router = (function() {
   apiRouter.route('/places/:id')
     .get(placesCtrl.read_a_place)
     .delete(placesCtrl.delete_a_place);
+
+    apiRouter.route('/status')
+      .get(statutsCtrl.list_all_statuts);
+
+    apiRouter.route('/status/:id')
+      .get(statutsCtrl.read_a_statut);
 
   return apiRouter;
 })();
