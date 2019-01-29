@@ -13,8 +13,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5593">
-              <caret line="329" column="22" selection-start-line="329" selection-start-column="22" selection-end-line="329" selection-end-column="22" />
+            <state relative-caret-position="430">
+              <caret line="327" column="1" lean-forward="true" selection-start-line="327" selection-start-column="1" selection-end-line="327" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -22,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/header.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="70" column="64" selection-start-line="70" selection-start-column="64" selection-end-line="70" selection-end-column="64" />
+            <state relative-caret-position="153">
+              <caret line="34" column="71" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -37,7 +37,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/signUp.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
@@ -46,11 +46,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/viewIdeas.html.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="306">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="e#4#8#1" expanded="true" />
+                <element signature="e#4#8#1" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,7 +100,6 @@
         <option value="$PROJECT_DIR$/controllers/controllerPages.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/views/viewEvents.html.php" />
-        <option value="$PROJECT_DIR$/views/viewIdeas.html.php" />
         <option value="$PROJECT_DIR$/views/viewShop.html.php" />
         <option value="$PROJECT_DIR$/views/viewTemplateEvent.html.php" />
         <option value="$PROJECT_DIR$/views/viewTemplateIdea.html.php" />
@@ -117,6 +120,7 @@
         <option value="$PROJECT_DIR$/views/viewSign.html.php" />
         <option value="$PROJECT_DIR$/views/signUp.php" />
         <option value="$PROJECT_DIR$/views/header.inc.php" />
+        <option value="$PROJECT_DIR$/views/viewIdeas.html.php" />
       </list>
     </option>
   </component>
@@ -201,12 +205,12 @@
       <workItem from="1548315496720" duration="10104000" />
       <workItem from="1548407314723" duration="8298000" />
       <workItem from="1548579839780" duration="14606000" />
-      <workItem from="1548783429415" duration="1911000" />
+      <workItem from="1548783429415" duration="3445000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146656000" />
+    <option name="totallyTimeSpent" value="148190000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -405,20 +409,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5593">
-          <caret line="329" column="22" selection-start-line="329" selection-start-column="22" selection-end-line="329" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/viewIdeas.html.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/Curl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -426,10 +416,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/signIn.php">
+    <entry file="file://$PROJECT_DIR$/views/signUp.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="153">
+          <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -440,17 +430,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/header.inc.php">
+    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="70" column="64" selection-start-line="70" selection-start-column="64" selection-end-line="70" selection-end-column="64" />
+        <state relative-caret-position="430">
+          <caret line="327" column="1" lean-forward="true" selection-start-line="327" selection-start-column="1" selection-end-line="327" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/signUp.php">
+    <entry file="file://$PROJECT_DIR$/views/header.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+          <caret line="34" column="71" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/signIn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/viewIdeas.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#4#8#1" expanded="true" />
+            <element signature="e#4#8#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

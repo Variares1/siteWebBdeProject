@@ -10,8 +10,21 @@
         </div>
         <div class="events-content">
             <div class="events-parent">
-                <?php $data = array(
-                    'i1' => array(
+            <?php
+
+            if (!isset($_SESSION["session"])){
+                echo '<a href="http://localhost/siteWebBdeProject/views/viewSign.html.php"><h2>> Before, please login <</h2></a>';
+            }
+            else {
+
+                $role = $_SESSION["session"];
+
+                if ($role == 0)
+                    ;
+
+                $data = array(
+
+                'i1' => array(
                         'id'=>1,
                         'name'=>'lancer de nains',
                         'image'=>'idea.png',
@@ -48,7 +61,7 @@
                         <br>
                         <a href="./viewTemplateIdea.html.php?page=<?php echo $key; ?>">+ View more</a>
                     </div>
-                <?php } ?>
+                <?php }} ?>
             </div>
         </div>
     </div>
