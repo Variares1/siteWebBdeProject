@@ -54,7 +54,7 @@ User.getUser = function(id, choix, test){
             }
         }
         else{
-            return ["Select password, statuts_id from users where email = ?", id];
+            return ["Select password, statuts_id, id from users where email = ?", id];
         } 
     }
     else{

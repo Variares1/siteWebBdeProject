@@ -35,7 +35,7 @@ Centre.createCenter = function(new_center){
 };
 Centre.update = function(id, new_center){
     return ["UPDATE centers SET center = ? WHERE id = ?", [new_center.center, id]];
-}
+};
 Centre.getCenter = function(id){
     if(id){
         return ["Select * from centers where id = ? ", id];

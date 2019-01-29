@@ -33,7 +33,7 @@ module.exports = {
 		    }
 	    } 
 	    else{
-	    	return res.status(400).json({'error':'you don t have the authorization'})
+	    	return res.status(400).json({'error':'you don t have the authorization'});
 	    }
 	},
 	list_all_places:function(req, res) {
@@ -69,7 +69,7 @@ module.exports = {
 		    });
 	    }
 	    else{
-	    	return res.status(400).json({'error':'you don t have the authorization'})
+	    	return res.status(400).json({'error':'you don t have the authorization'});
 	    }
 	},
 	delete_a_place:function(req, res) {
@@ -88,7 +88,7 @@ module.exports = {
 		    });
 	    }
 	    else{
-	    	return res.status(400).json({'error':'you don t have the authorization'})
+	    	return res.status(400).json({'error':'you don t have the authorization'});
 	    }  
 	}
 }

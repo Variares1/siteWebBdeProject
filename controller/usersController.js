@@ -189,16 +189,17 @@ module.exports = {
             res.json(err);
           }
           else if(Object.getOwnPropertyNames(user).length==1){
-            return res.status(404).json({'error':'Authentication failed. User not found'})
+            return res.status(404).json({'error':'Authentication failed. User not found'});
           }
           else{
             let a=bcrypt.compareSync(req.body.password, user[0].password);
-            console.log('a : ', a);
+            
             if(!a){
-              return res.status(403).json({'error':'Authentication failed. Wrong password'})
+              return res.status(403).json({'error':'Authentication failed. Wrong password'});
             }
             else{
-                return res.json({'token': jwt.generateToken(req.body.id,user[0].statuts_id), 'statuts' :user[0].statuts_id});
+              console.log('a : ', user[0].id);
+                return res.json({'token': jwt.generateToken(req.body.id,user[0].statuts_id, user[0].id), 'statuts': user[0].statuts_id});
             }
           }
         }/*,sql*/);

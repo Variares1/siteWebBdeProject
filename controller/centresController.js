@@ -33,7 +33,7 @@ module.exports = {
 		    }
 	    } 
 	    else{
-	    	return res.status(400).json({'error':'you don t have the authorization'})
+	    	return res.status(400).json({'error':'you don t have the authorization'});
 	    }
 	},
 	list_all_centers:function(req, res) {
@@ -57,10 +57,10 @@ module.exports = {
 		//getting auth header
 	    let headerAuth = req.headers['authorization'];
 	    let users = jwt.getUserStatuts(headerAuth);
-	    if(users[0]<0 || users[1]==''){
+	    if(users[1]<0 || users[0]==''){
 	      return res.status(400).json({'error':'wrong token'});
 	    }
-	    if(users[0]==3){
+	    if(users[1]==3){
 	    	let param = center.update(req.params.id, req.body.center);
 	    	sql.exec(param[0], param[1], function(err, centre) {
 		      if (err){res.json(err);}
@@ -69,7 +69,7 @@ module.exports = {
 		    });
 	    }
 	    else{
-	    	return res.status(400).json({'error':'you don t have the authorization'})
+	    	return res.status(400).json({'error':'you don t have the authorization'});
 	    }
 	},
 	delete_a_center:function(req, res) {
@@ -89,7 +89,7 @@ module.exports = {
 		    });
 	    }
 	    else{
-	    	return res.status(400).json({'error':'you don t have the authorization'})
+	    	return res.status(400).json({'error':'you don t have the authorization'});
 	    }  
 	}
 }

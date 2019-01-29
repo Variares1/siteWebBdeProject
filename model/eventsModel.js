@@ -11,37 +11,22 @@ let Event = function(task){
     this.p_t = task.p_t;
     this.places_id = task.places_id;
 };
-//post a new centre
-Event.createEvent = function(new_event){
-//Search the centre in db
-    return [/*sql.query(*/"INSERT INTO centers (center) SELECT * FROM (SELECT ?) AS tmp WHERE NOT EXISTS (SELECT center FROM centers WHERE center = ?) LIMIT 1", [new_center.center,new_center.center]];/*, function (err, res) {
-        if(err){
-            console.log("error: ", err);
-            result(err, null);
-        }   
-        else{
-            if(Object.getOwnPropertyNames(res).length!=2){//test if the centre exist in db
-                //post the new centre
-                sql.query("INSERT INTO centers set ?", new_center, function (err, res) {  
-                    if(err) {
-                        console.log("error: ", err);
-                        result(err, null);
-                    }
-                    else{
-                        console.log(res.insertId);
-                        result(null, res.insertId);
-                    }
-                });
-            }
-            else{
-            	console.log(res);
-                result(null, null);
-            }            
-        }
-    });*/               
+//post a new event
+Event.createEvent = function(new_event, choix){
+//Search the event in db
+	if (choix==1) {
+		return ["INSERT INTO  events Set ?", new_event]; 
+	}
+	else{
+		return ["INSERT INTO events (name, description, date, price, p_r, p_t, places_id) SELECT * FROM (SELECT ?, ?, ?, ?, ?, ?, ?) AS tmp WHERE NOT EXISTS (SELECT name, date FROM events WHERE name = ? && date = ?)",
+			[new_event.name, new_event.description, new_event.date, new_event.price, new_event.p_t, new_event.p_t, new_event.places_id, new_event.name, new_event.date]];
+
+	}
+    
+                 
 };
 Event.update = function(id, new_event){
-    return ["UPDATE events SET name = ? WHERE id = ?", [new_event.name, id]];
+    return ["UPDATE events SET ? WHERE id = ?", [new_event, id]];
 }
 Event.getEvent = function(id){
     if(id){
@@ -54,4 +39,4 @@ Event.getEvent = function(id){
 Event.remove = function(id){
     return ["DELETE FROM events WHERE id = ?", id]; 
 };
-module.exports= Centre;
+module.exports= Event;
