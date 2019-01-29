@@ -5,9 +5,9 @@ let Centre = function(task){
     this.center = task;
 };
 //post a new centre
-Centre.createCenter = function createCenter(new_center, result, sql){
+Centre.createCenter = function(new_center){
 //Search the centre in db
-    sql.query("Select center from centers where center = ? ", new_center.center, function (err, res) {
+    return [/*sql.query(*/"INSERT INTO centers (center) SELECT * FROM (SELECT ?) AS tmp WHERE NOT EXISTS (SELECT center FROM centers WHERE center = ?) LIMIT 1", [new_center.center,new_center.center]];/*, function (err, res) {
         if(err){
             console.log("error: ", err);
             result(err, null);
@@ -31,42 +31,20 @@ Centre.createCenter = function createCenter(new_center, result, sql){
                 result(null, null);
             }            
         }
-    });               
+    });*/               
 };
-//return all centers
-Centre.getAllCenters = function(result, sql) {
-    sql.query("Select * from centers", function (err, res) {
-        if(err) {
-            console.log("error: ", err);
-            result(null, err);
-        }
-        else{
-            console.log('centers : ', res);  
-            result(null, res);
-        }
-    });   
-};
-Centre.getCenterById = function(id, result, sql) {
-    sql.query("Select * from centers where id = ? ", id, function (err, res) {             
-        if(err) {
-            console.log("error: ", err);
-           result(err, null);
-        }
-        else{
-            result(null, res);
-        }              
-    });
+Centre.update = function(id, new_center){
+    return ["UPDATE centers SET center = ? WHERE id = ?", [new_center.center, id]];
+}
+Centre.getCenter = function(id){
+    if(id){
+        return ["Select * from centers where id = ? ", id];
+    }
+    else{return ["Select * from centers"];}
+    
 };
 //delete a center
-Centre.remove = function(id, result, sql){
-    sql.query("DELETE FROM centers WHERE id = ?", [id], function (err, res) {
-        if(err) {
-            console.log("error: ", err);
-            result(null, err);
-        }
-        else{
-            result(null, res);
-        }
-    }); 
+Centre.remove = function(id){
+    return ["DELETE FROM centers WHERE id = ?", id]; 
 };
 module.exports= Centre;
