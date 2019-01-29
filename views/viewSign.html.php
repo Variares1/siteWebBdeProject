@@ -25,30 +25,30 @@
 
                     <label for="center">Choose a center:</label>
                     <select id="center" name="center">
-                        <option value="Nice">Nice</option>
-                        <option value="Aix-en-Provence">Aix-en-Provence</option>
-                        <option value="Montpellier">Montpellier</option>
-                        <option value="Toulouse">Toulouse</option>
-                        <option value="Pau">Pau</option>
-                        <option value="Bordeaux">Bordeaux</option>
-                        <option value="Angoulême">Angoulême</option>
-                        <option value="La Rochelle">La Rochelle</option>
-                        <option value="Nantes">Nantes</option>
-                        <option value="Saint Nazaire">Saint Nazaire</option>
-                        <option value="Orléans">Orléans</option>
-                        <option value="Le Mans">Le Mans</option>
-                        <option value="Brest">Brest</option>
-                        <option value="Paris Nanterre">Paris Nanterre</option>
-                        <option value="Reims">Reims</option>
-                        <option value="Caen">Caen</option>
-                        <option value="Rouen">Rouen</option>
-                        <option value="Arras">Arras</option>
-                        <option value="Lille">Lille</option>
-                        <option value="Nancy">Nancy</option>
-                        <option value="Strasbourg">Strasbourg</option>
-                        <option value="Dijon">Dijon</option>
-                        <option value="Grenoble">Grenoble</option>
-                        <option value="Alger">Alger</option>
+                        <option value="1">Nice</option>
+                        <option value="2">Aix-en-Provence</option>
+                        <option value="3">Montpellier</option>
+                        <option value="4">Toulouse</option>
+                        <option value="5">Pau</option>
+                        <option value="6">Bordeaux</option>
+                        <option value="7">Angoulême</option>
+                        <option value="8">La Rochelle</option>
+                        <option value="9">Nantes</option>
+                        <option value="10">Saint Nazaire</option>
+                        <option value="11">Orléans</option>
+                        <option value="12">Le Mans</option>
+                        <option value="13">Brest</option>
+                        <option value="14">Paris Nanterre</option>
+                        <option value="15">Reims</option>
+                        <option value="16">Caen</option>
+                        <option value="17">Rouen</option>
+                        <option value="18">Arras</option>
+                        <option value="19">Lille</option>
+                        <option value="20">Nancy</option>
+                        <option value="21">Strasbourg</option>
+                        <option value="22">Dijon</option>
+                        <option value="23">Grenoble</option>
+                        <option value="24">Alger</option>
                     </select><br>
 
                     <input type="button" id="signUp" value="go to login page" onclick="inToUp()">

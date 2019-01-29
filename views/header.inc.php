@@ -1,7 +1,9 @@
 <?php
     session_start();
     include('Curl.php');
-    $role = $_SESSION["session"];
+
+    if (isset($_SESSION["session"]))
+        $role = $_SESSION["session"];
 ?>
 
 <!DOCTYPE html>
@@ -58,15 +60,16 @@
 //    echo '<script>alert("Connected like '.$role.' ")</script>';
 
     $userColor = "";
+    if (isset($_SESSION["session"])){
+        if ($role == 1)
+            $userColor = "style='color:rgba(165, 0, 255, 0.8)'";
 
-    if ($role == 1)
-        $userColor = "style='color:rgba(165, 0, 255, 0.8)'";
+        elseif ($role == 2)
+            $userColor = "style='color:rgba(0, 165, 255, 0.8)'";
 
-    elseif ($role == 2)
-        $userColor = "style='color:rgba(0, 165, 255, 0.8)'";
-
-    elseif ($role == 3)
-        $userColor = "style='color:rgba(255, 0, 165, 0.8)'";
+        elseif ($role == 3)
+            $userColor = "style='color:rgba(255, 0, 165, 0.8)'";
+    }
 
     ?>
 
