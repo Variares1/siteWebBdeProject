@@ -6,7 +6,30 @@ class Curl {
 
         $url = 'http://localhost:8080/'.$road;
         $ch = curl_init($url);
+
+        session_start();
+        if (isset($_SESSION["token"])){
+            $token = $_SESSION["token"];
+            $authorization = "Authorization: Bearer ".$token;
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json' , $authorization ));
+        }
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $result = curl_exec($ch);
+        return $result;
+    }
+
+    public function getT($road, $data, $token){
+
+        $url = 'http://localhost:8080/'.$road;
+
+        $ch = curl_init($url);
+        $authorization = $token; //"Authorization: Bearer 080042cad6356ad5dc0a720c18b53b8e53d4c274";
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json' , $authorization ));
+        $data_string= json_encode($data);
+        //curl_setopt ($ch, CURLOPT_URL, $url / oauth2 / token);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $result = curl_exec($ch);
         return $result;
@@ -28,38 +51,37 @@ class Curl {
         );
 
         $result = curl_exec($ch);
-        echo $ch;
         return $result;
     }
 
-    public function put($road, $data_string){
+    public function put($road, $data){
 
         $url = 'http://localhost:8080/'.$road;
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
         curl_setopt($ch, CURLOPT_FAILONERROR, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
                 'Content-Type: application/json',
-                'Content-Length: ' . strlen($data_string))
+                'Content-Length: ' . strlen($data))
         );
 
         $result = curl_exec($ch);
         return $result;
     }
 
-    public function delete($road, $data_string){
+    public function delete($road, $data){
 
         $url = 'http://localhost:8080/'.$road;
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
         curl_setopt($ch, CURLOPT_FAILONERROR, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
                 'Content-Type: application/json',
-                'Content-Length: ' . strlen($data_string))
+                'Content-Length: ' . strlen($data))
         );
 
         $result = curl_exec($ch);
@@ -68,4 +90,4 @@ class Curl {
 
 }
 
-//$curl = new Curl;
+$curl = new Curl;

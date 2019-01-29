@@ -1,6 +1,7 @@
 <?php
     session_start();
     include('Curl.php');
+    $role = $_SESSION["session"];
 ?>
 
 <!DOCTYPE html>
@@ -54,6 +55,19 @@
     $article2 = $data[1];
     $article3 = $data[2];
 
+//    echo '<script>alert("Connected like '.$role.' ")</script>';
+
+    $userColor = "";
+
+    if ($role == 1)
+        $userColor = "style='color:rgba(165, 0, 255, 0.8)'";
+
+    elseif ($role == 2)
+        $userColor = "style='color:rgba(0, 165, 255, 0.8)'";
+
+    elseif ($role == 3)
+        $userColor = "style='color:rgba(255, 0, 165, 0.8)'";
+
     ?>
 
     <nav>
@@ -61,7 +75,7 @@
         <li><a href=<?php echo $ideas ?>><i class="far fa-lightbulb" <?php if( strstr($page, $pageIdeas)) echo $here ?> ></i> ideas</a></li>
         <li><a href=<?php echo $events ?>><i class="far fa-calendar-alt" <?php if( strstr($page, $pageEvents)) echo $here ?> ></i> events</a></li>
         <li><a href=<?php echo $shop ?>><i class="fas fa-shopping-basket" <?php if( strstr($page, $pageShop)) echo $here ?> ></i> shop</a></li>
-        <li class="sign-home"><a href=<?php echo $sign ?>><i class="fas fa-user" <?php if( strstr($page, $pageSign)) echo $here ?> ></i> Sign in/up</a></li>
+        <li class="sign-home"><a href=<?php echo $sign ?>><i class="fas fa-user" <?php echo $userColor; if( strstr($page, $pageSign)) echo $here ?> ></i> Sign in/up</a></li>
     </nav>
 
     <leftMenu>

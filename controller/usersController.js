@@ -198,7 +198,7 @@ module.exports = {
               return res.status(403).json({'error':'Authentication failed. Wrong password'})
             }
             else{
-                return [res.json({token: jwt.generateToken(req.body.id,user[0].statuts_id)}),, user[0].statuts_id];
+                return res.json({'token': jwt.generateToken(req.body.id,user[0].statuts_id), 'statuts' :user[0].statuts_id});
             }
           }
         }/*,sql*/);
