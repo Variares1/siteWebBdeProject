@@ -44,14 +44,13 @@
 
     $here = "style='color:rgba(255, 165, 0, 0.8)'";
 
-//    $curl = new Curl;
-//    $try = $curl->get('shop');
-//
-//    var_dump($try);
+    $try = $curl->get('products/common');
 
-    $data[0] = 'https://pngimage.net/wp-content/uploads/2018/06/item-png-7.png';
-    $data[1] = 'https://vignette.wikia.nocookie.net/thesimssocial/images/e/ec/Hourglass_%28item%29.png/revision/latest?cb=20120802004156';
-    $data[2] = 'https://vignette.wikia.nocookie.net/thesimssocial/images/2/21/Ruby-%28item%29.png/revision/latest?cb=20121108015014';
+    $data1 = json_decode($try, true);
+
+    $data[0] = 'http://localhost/siteWebBdeProject/assets/upload/item.jpg';
+    $data[1] = 'http://localhost/siteWebBdeProject/assets/upload/item.jpg';
+    $data[2] = 'http://localhost/siteWebBdeProject/assets/upload/item.jpg';
 
     $article1 = $data[0];
     $article2 = $data[1];
@@ -104,14 +103,30 @@
                                 </ol>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
+                                        <a href='http://localhost/siteWebBdeProject/views/viewTemplateShop.html.php?page=0'>
                                         <img class="d-block w-100" src="<?php echo $article1 ?>" alt="First slide">
+                                        <?php echo '<text>'.$data1['0']['name'].'</text>';?>
+                                        <?php echo '<text1>'.$data1['0']['price'].' €</text1>';?>
+                                        </a>
+
                                     </div>
                                     <div class="carousel-item">
+                                        <a href='http://localhost/siteWebBdeProject/views/viewTemplateShop.html.php?page=1'>
                                         <img class="d-block w-100" src="<?php echo $article2 ?>" alt="Second slide">
+                                        <?php echo '<text>'.$data1['1']['name'].'</text>';?>
+                                        <?php echo '<text1>'.$data1['1']['price'].' €</text1>';?>
+                                        </a>
+
                                     </div>
                                     <div class="carousel-item">
+                                        <a href='http://localhost/siteWebBdeProject/views/viewTemplateShop.html.php?page=2'>
                                         <img class="d-block w-100" src="<?php echo $article3 ?>" alt="Third slide">
+                                        <?php echo '<text>'.$data1['2']['name'].'</text>';?>
+                                        <?php echo '<text1>'.$data1['2']['price'].' €</text1>';?>
+                                        </a>
+
                                     </div>
+
                                 </div>
                                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
