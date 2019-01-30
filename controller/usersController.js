@@ -50,9 +50,12 @@ module.exports = {
         let param = user.createUser(new_user);
         sql.exec(param[0], param[1], 
         /*user.createUser(new_user.email, new_user, */function(err, user) { 
-          if (err || (err==null && user==null)){
+          if (err/* || (err==null && user==null)*/){
+            
+            res.json(err);
+          }
+          else if(Object.getOwnPropertyNames(user).length==1){
             res.status(409).json({'error':'user already exist'});
-            //res.json(err);
           }
           else{res.status(201).json({'user_id' : user.insertId});}
         }/*,sql*/);

@@ -8,6 +8,10 @@ let statutsCtrl = require('../controller/statutsController');
 let eventsCtrl = require('../controller/eventsController');
 let productsCtrl = require('../controller/productsController');
 let participationsCtrl = require('../controller/usersEventsController');
+let cartCtrl = require('../controller/usersProductsController');
+let imgCtrl = require('../controller/imgsController');
+let commentCtrl = require('../controller/commentsController');
+
 exports.router = (function() {
   let apiRouter = express.Router();
 
@@ -76,5 +80,36 @@ exports.router = (function() {
 
     apiRouter.route('/participation/list')
       .post(participationsCtrl.read_a_participation);
+
+    apiRouter.route('/carts')
+      .get(cartCtrl.list_all_cart)
+      .post(cartCtrl.create_a_cart);
+
+    apiRouter.route('/carts/delete')
+      .post(cartCtrl.delete_a_cart);
+
+    apiRouter.route('/carts/read')
+      .post(cartCtrl.read_a_cart);
+
+    apiRouter.route('/carts/update')
+      .post(cartCtrl.update_a_cart);
+
+    apiRouter.route('/imgs')
+      .get(imgCtrl.list_all_imgs)
+      .post(imgCtrl.create_a_img);
+
+    apiRouter.route('/imgs/:id')
+      .get(imgCtrl.read_a_img)
+      .put(imgCtrl.update_a_img)
+      .delete(imgCtrl.delete_a_img);
+
+    apiRouter.route('/comments')
+      .get(commentCtrl.list_all_comments)
+      .post(commentCtrl.create_a_comment);
+
+    apiRouter.route('/comments/:id')
+      .get(commentCtrl.read_a_comment)
+      .put(commentCtrl.update_a_comment)
+      .delete(commentCtrl.delete_a_comment);
   return apiRouter;
 })();
