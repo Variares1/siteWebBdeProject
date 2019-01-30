@@ -21,7 +21,7 @@ module.exports = {
 	    if(users[1]<0 || users[0]==''){
 	      return res.status(400).json({'error':'wrong token'});
 	    }
-	    else if(users[1]==3 || user[1]==2){
+	    else if(users[1]==3 || users[1]==2){
 	        //let new_center = new center(req.body.center);
 	        let param = event.createEvent(req.body, choix);
 	        sql.exec(param[0], param[1], function(err, event) {

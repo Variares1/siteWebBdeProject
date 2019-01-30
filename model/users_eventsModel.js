@@ -25,9 +25,7 @@ Participation.getParticipation = function(new_participation){
 	}
 	else{
 		return["Select * from users_events"];
-	}
-    
-    
+	}   
 };
 //delete a participation
 Participation.remove = function(new_participation){

@@ -62,7 +62,7 @@ module.exports = {
 	        return res.status(400).json({ 'error':'missing parameters' });
 	    }
 	    else if(users[2]==req.body.users_id){
-	    	let param = center.remove( req.body);
+	    	let param = participation.remove( req.body);
 	    	sql.exec(param[0], param[1], function(err, participation) {
 		      if (err){res.json(err);}
 		      else if(Object.getOwnPropertyNames(participation).length==1){res.status(404).json({'error':'participation not found'});}
