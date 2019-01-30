@@ -1,6 +1,6 @@
 <?php
 
-require("Curl.php");
+include("Curl.php");
 
 ?>
 
@@ -15,23 +15,27 @@ require("Curl.php");
 
         <?php
 
+        if (isset($_SESSION["session"]))
+            $try = $curl->getT('users','',$_SESSION["token"]);
 
-        $data = array(
+        $data = json_decode($try, true);
 
-            $e1 = array(
-                "firstName" => "Zoro",
-                "lastName" => "Roronora",
-                "ay" => "ohohohoho",
-            ),
+//        $data = array(
+//
+//            $e1 = array(
+//                "firstName" => "Zoro",
+//                "lastName" => "Roronora",
+//                "ay" => "ohohohoho",
+//            ),
+//
+//            $e2 = array(
+//                "firstName" => "Luffy",
+//                "lastName" => "TheD",
+//                "ay" => "ehehehehe",
+//            ),
 
-            $e2 = array(
-                "firstName" => "Luffy",
-                "lastName" => "TheD",
-                "ay" => "ehehehehe",
-            ),
 
-
-        );
+//        );
         if (isset($_GET['key']))
             var_dump($_GET['key']);
 

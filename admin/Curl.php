@@ -6,7 +6,44 @@ class Curl {
 
         $url = 'http://localhost:8080/'.$road;
         $ch = curl_init($url);
+
+        session_start();
+        if (isset($_SESSION["token"])){
+            $token = $_SESSION["token"];
+            $authorization = "Authorization: Bearer ".$token;
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json' , $authorization ));
+        }
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $result = curl_exec($ch);
+        return $result;
+    }
+
+    public function getT($road, $token){
+
+        $url = 'http://localhost:8080/'.$road;
+
+        $ch = curl_init($url);
+        $authorization = "Authorization: Bearer ".$token;
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json' , $authorization ));
+
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $result = curl_exec($ch);
+        return $result;
+    }
+
+    public function getTD($road, $data, $token){
+
+        $url = 'http://localhost:8080/'.$road;
+
+        $ch = curl_init($url);
+        $authorization = "Authorization: Bearer ".$token;
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json' , $authorization ));
+        $data_string= json_encode($data);
+        //curl_setopt ($ch, CURLOPT_URL, $url / oauth2 / token);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $result = curl_exec($ch);
         return $result;
@@ -28,7 +65,6 @@ class Curl {
         );
 
         $result = curl_exec($ch);
-        echo $ch;
         return $result;
     }
 

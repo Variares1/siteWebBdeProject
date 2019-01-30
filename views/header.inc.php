@@ -65,11 +65,15 @@
         if ($role == 1)
             $userColor = "style='color:rgba(165, 0, 255, 0.8)'";
 
-        elseif ($role == 2)
+        elseif ($role == 2){
+            $sign = 'http://localhost/siteWebBdeProject/admin/indexA.html.php';
             $userColor = "style='color:rgba(0, 165, 255, 0.8)'";
+        }
 
-        elseif ($role == 3)
+        elseif ($role == 3){
+            $sign = 'http://localhost/siteWebBdeProject/admin/indexA.html.php';
             $userColor = "style='color:rgba(255, 0, 165, 0.8)'";
+        }
     }
     else
         $signTitle = "Sign in/up";
