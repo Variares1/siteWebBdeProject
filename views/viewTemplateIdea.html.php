@@ -41,9 +41,9 @@
     <title><?php echo $name; ?></title>
     <div class="container-page">
         <div class="ideas" <?php
-        if(is_file('/assets/upload/'.$image))
-            echo 'style="background-image:url(../assets/upload/'.$image.')"';
-        else
+//        if(is_file('/assets/upload/'.$image))
+//            echo 'style="background-image:url(../assets/upload/'.$image.')"';
+//        else
             echo 'style="background-image:url(../assets/upload/ideas.jpg)"';
         ?>>
             <h1><?php echo $name; ?></h1>
