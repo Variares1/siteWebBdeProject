@@ -6,6 +6,7 @@ let Comment = function(task){
     this.users_id = task.users_id;
     this.comments_id = task.comments_id;
     this.imgs_id = task.imgs_id;
+    this.events_id = task.events_id;
 };
 //post a new Comment
 Comment.createComment = function(new_comment){

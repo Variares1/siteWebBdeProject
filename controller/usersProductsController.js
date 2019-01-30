@@ -14,7 +14,7 @@ module.exports = {
 	    if(users[1]<0 || users[0]==''){
 	      return res.status(400).json({'error':'wrong token'});
 	    }
-	    if(/*req.body.users_id==null || */req.body.products_id==null || req.body.qty==null){
+	    if(req.body.users_id==null || req.body.products_id==null || req.body.qty==null){
 	        return res.status(400).json({ 'error':'missing parameters' });
 	    }
 	    else if(users[2]==req.body.users_id/* || users[0]==req.body.email*/){

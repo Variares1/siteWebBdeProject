@@ -24,6 +24,7 @@ exports.router = (function() {
     .get(usersCtrl.read_a_user)
     .put(usersCtrl.update_a_user)
     .delete(usersCtrl.delete_a_user);
+
   apiRouter.route('/users/signin')
     .post(usersCtrl.sign_in);
 
@@ -45,10 +46,12 @@ exports.router = (function() {
     .delete(placesCtrl.delete_a_place);
 
     apiRouter.route('/status')
+      .post(statutsCtrl.create_a_statut)
       .get(statutsCtrl.list_all_statuts);
 
     apiRouter.route('/status/:id')
-      .get(statutsCtrl.read_a_statut);
+      .get(statutsCtrl.read_a_statut)
+      .delete(statutsCtrl.delete_a_statut);
 
     apiRouter.route('/events')
       .get(eventsCtrl.list_all_events)
