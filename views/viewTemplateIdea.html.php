@@ -7,25 +7,6 @@
 
     $data = json_decode($try, true);
 
-//    $data = array(
-//        'i1' => array(
-//            'id'=>1,
-//            'name'=>'lancer de nains',
-//            'image'=>'idea.png',
-//            'link'=>'http://google.com',
-//            'content'=>"hahuhud ahahh hhh adhdh ahahahh sjs as j sjsshs shss shnshs shshsbss shshshsh shshshns sjshs sjhshs cc sssz",
-//            'likes'=>12,
-//        ),
-//        'i2' => array(
-//            'id'=>2,
-//            'name'=>'tournois de pq',
-//            'image'=>'events.png',
-//            'link'=>'http://google.com',
-//            'content'=>"hahuhud ahahh hhh adhdh ahahahh sjs as j sjsshs shss shnshs shshsbss shshshsh shshshns sjshs sjhshs cc sssz",
-//            'likes'=>4,
-//        ),
-//    );
-
     $name = $data[$page]['name'];
 //    $image = $data[$page]['image'];
 //    $link = $data[$page]['link'];

@@ -7,12 +7,12 @@ class Curl {
         $url = 'http://localhost:8080/'.$road;
         $ch = curl_init($url);
 
-        session_start();
-        if (isset($_SESSION["token"])){
-            $token = $_SESSION["token"];
-            $authorization = "Authorization: Bearer ".$token;
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json' , $authorization ));
-        }
+//        session_start();
+//        if (isset($_SESSION["token"])){
+//            $token = $_SESSION["token"];
+//            $authorization = "Authorization: Bearer ".$token;
+//            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json' , $authorization ));
+//        }
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $result = curl_exec($ch);

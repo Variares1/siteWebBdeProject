@@ -19,12 +19,14 @@
 
                     foreach ($data as $key => $value){
                         echo '<div class="item">';
+                        echo '<img src="../assets/upload/item.jpg" alt="item">';
                         echo $value['name'];
                         echo '<br><p>Description :';
                         echo $value['description'].'</p>';
                         echo '<br><p>Price :';
                         echo $value['price'].' €</p>';
                         echo '<br>';
+                        echo '<a href="./viewTemplateShop.html.php?page='.$key.'">+ View more</a>';
                         echo '</div>';
 
                     }
